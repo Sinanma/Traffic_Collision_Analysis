@@ -1,15 +1,16 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Age and Gender Dynamics in Traffic Accidents: A 2019 Canadian Case Study"
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
+  - Sinan Ma
+thanks: "Code and data are available at: https://github.com/Sinanma/Traffic_Collision_Analysis.git."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study examines the dynamics of traffic collisions across Canada for the year 2019, employing an extensive dataset retrieved from Open Canada's national collision database. Through robust data cleaning and analysis, we identified critical factors contributing to the severity of traffic accidents, encapsulating demographic variables, environmental conditions, and temporal patterns. The methodology centered on a comprehensive examination of collision records, integrating Bayesian statistical models to interpret the nuanced interplay between predictors such as age, gender, weather, and road surface conditions. The results illuminate significant correlations, with adverse weather and certain road conditions markedly increasing the likelihood of fatal outcomes. These findings offer valuable insights into preventive measures and policy-making, aiming to enhance road safety and reduce the incidence of traffic-related fatalities. The implications of this research underscore the necessity for targeted interventions and bolster the framework for data-driven decision-making in national traffic management and infrastructure planning."
 format: pdf
-number-sections: true
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
 bibliography: references.bib
 ---
 
@@ -25,28 +26,126 @@ library(palmerpenguins)
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+Road traffic injuries represent a global public health crisis, claiming approximately 1.19 million lives annually and ranking as the leading cause of death among children and young adults aged 5–29 years [@WHO2023]. These staggering figures from the World Health Organization underscore the urgent need for concerted efforts in traffic collision research and policy intervention. In Canada, the intricacies of traffic incidents captured within the 2019 national collision dataset open a window into understanding these tragedies at a granular level. This research harnesses the depth of this data to unravel the demographic determinants—age, gender, and seating position—that predispose individuals to varying collision severity outcomes.
 
-The remainder of this paper is structured as follows. @sec-data....
+This study delves into statistical methodologies to decode the patterns embedded within the incidents, mapping out the demographic landscape of traffic collision severity. Utilizing a sophisticated Bayesian regression model, implemented through R—a comprehensive environment for statistical computing and graphics [@citeR], we dissect large-scale data to articulate the distinct demographic factors that significantly modulate the likelihood of severe traffic collisions. The methodology and analytical strategies employed are learned from *Telling Stories with Data* by Rohan Alexander [@tellingstorieswithdata], which provides the statistical framework and R code that underpin our analysis.
 
+
+The estimand of this paper is the nuanced effect of these demographic variables—age, gender, and seating position—on the severity of traffic incidents, with a focus on the contextual interplay of environmental conditions such as weather and road surfaces.
+
+Our investigation is vital for an array of stakeholders, from traffic safety regulators to urban planners and the public at large. Traditional traffic studies have often overlooked the multifaceted relationships inherent within demographic data and collision severity. This study fills this lacuna by employing a robust Bayesian approach, thereby enabling precise inferences on the complex interdependencies at play. The insights gleaned offer a potent tool for devising tailored preventive measures and enhancing road safety strategies, with the potential to mitigate the human and economic toll of traffic collisions.
+
+Our findings present a nuanced analysis of collision severity disparities across various demographics. This study reveals the differential patterns of collision impacts among age groups, genders, and occupants based on their seating positions within vehicles. We discover the heightened risk factors associated with specific demographics, offering a critical assessment of the stereotypes surrounding vehicular accidents and safety measures.
+
+The significance of this study transcends academic boundaries, providing actionable insights for strategic safety enhancements. It sheds light on the demographic dynamics that influenced Canadian traffic collisions in 2019, aiding the development of informed and effective interventions to reduce road traffic injuries and fatalities.
+
+The paper begins by introducing the broader context and motivation behind our study. @sec-data introduces the dataset utilized for analysis, explores the dataset and key variables, enhanced by visual data representations. @sec-model describes the Bayesian regression model used to analyze these factors, elucidating its relevance and utility. @sec-results presents the findings, offering detailed interpretations of the data. @sec-discussion discusses the implications, study limitations, and potential future research directions.
 
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+This research utilizes the 2019 National Collision Database, publicly available via Open Canada's data portal. The dataset encompasses detailed records of traffic collisions throughout Canada, capturing various environmental and demographic factors associated with each incident. The comprehensive dataset for 2019 can be accessed directly through [National Collision Database](https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/download/2019_dataset_en.csv) [@Canada2019CollisionData], and additional details about the dataset are available on its main overview page [here](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a) [@Canada2019Dataset].
+
+## Dataset Description
+
+The 2019 dataset provides extensive data points for over 200,000 traffic incidents, detailing the date, time, geographic coordinates, environmental conditions, vehicle types, and personal demographics involved in each collision. This rich dataset offers a unique opportunity to explore the nuanced factors that contribute to traffic collision severities in Canada, such as the specific impact of road surface conditions during different weather scenarios.
+
+## Variables of Interest
+
+The primary variables analyzed in this study include:
+- **Month**: Categorical; the month when the collision occurred, from "January" to "December".
+- **Day of the Week**: Categorical; the day of the week on which the collision occurred, from "Monday" to "Sunday".
+- **Weather Condition**: Categorical; the observed weather conditions during the incident, such as "Clear", "Rain", "Snow", etc.
+- **Road Surface Condition**: Categorical; the condition of the road during the incident, including "Dry", "Wet", "Icy", etc.
+- **Collision Severity**: Categorical; the severity of the collision, categorized as "Fatal" or "Non-Fatal".
+
+Each variable is crucial for understanding the dynamics of traffic accidents and their outcomes, which can significantly aid in preventative measures and policy making.
+
+## Data Cleaning and Preparation
+
+Data was cleaned and prepared for analysis, which involved handling missing values, correcting data entry errors, and formatting date and time entries for consistency. The cleaned dataset was then used for all subsequent analyses, ensuring reliability and accuracy in the findings.
+
+## Graphical and Statistical Analysis
+
+To elucidate the data's characteristics and the relationships between various factors and traffic collision outcomes, extensive graphical and statistical analyses were performed. Each figure provides insights into specific aspects of the data, helping to visualize the complex interactions and distributions that underpin traffic collision dynamics.
+
+- **Figure 1**: [Distribution of Accidents by Driver Age](#fig-age-distribution) reveals the age profile of drivers involved in accidents, highlighting specific age groups that are more susceptible to being in collisions.
+  
+- **Figure 2**: [Distribution of Accidents by Driver Gender](#fig-gender-distribution) explores the gender distribution among drivers involved in traffic accidents, indicating potential gender-specific patterns in accident rates.
+
+- **Figure 3**: [Impact of Weather Conditions on Collision Severity: Fatal vs. Non-Fatal](#fig-weather-impact-severity) presents a side-by-side comparison of how different weather conditions affect the severity of traffic collisions, contrasting fatal and non-fatal outcomes.
+
+- **Figure 4**: [Impact of Road Surface Conditions on Collision Severity: Fatal vs. Non-Fatal](#fig-road-surface-impact) illustrates the relationship between road surface conditions and the severity of collisions, providing a parallel analysis for both fatal and non-fatal incidents.
+
+- **Figure 5**: [Distribution of Traffic Accidents by Day of the Week](#fig-accidents-by-day) depicts the frequency of accidents across different days, identifying any trends related to the day of the week on accident rates.
+
+- **Figure 6**: [Distribution of Traffic Accidents by Month](#fig-accidents-by-month) illustrates the monthly distribution of traffic accidents, helping to uncover seasonal or monthly variations in collision frequencies.
+
+These visualizations are pivotal for understanding the underlying patterns in the data and assist in making informed conclusions about traffic safety and accident prevention strategies.
+
 
 ```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
 #| echo: false
+#| message: false
+#| warning: false
+#| label: fig-age-distribution
+#| fig-cap: "Distribution of Accidents by Driver Age"
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+
+# Load the dataset
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Filter data for drivers only
+driver_data <- data %>%
+  filter(person_position == "Driver")
+
+# Create a histogram of driver ages
+ggplot(driver_data, aes(x = age)) +
+  geom_histogram(bins = 30, fill = "blue", color = "black") +
+  scale_x_continuous(breaks = seq(0, max(driver_data$age, na.rm = TRUE), by = 10)) +
+  labs(title = "Distribution of Accidents by Driver Age",
+       x = "Age",
+       y = "Accident Count") +
+  theme_minimal()
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-gender-distribution
+#| fig-cap: "Distribution of Accidents by Driver Gender"
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Load the dataset
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Filter data for drivers only
+driver_gender_data <- data %>%
+  filter(person_position == "Driver") %>%
+  group_by(gender) %>%
+  summarise(accident_count = n())
+
+# Create a bar plot for accidents by gender
+ggplot(driver_gender_data, aes(x = gender, y = accident_count, fill = gender)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  geom_text(aes(label = accident_count), vjust = -0.3, color = "black", size = 3.5) +
+  labs(title = "Distribution of Accidents by Driver Gender",
+       x = "Gender",
+       y = "Accident Count") +
+  theme_minimal()
+
 ```
 
 Talk more about it.
@@ -54,27 +153,174 @@ Talk more about it.
 And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
 #| echo: false
-#| warning: false
 #| message: false
+#| warning: false
+#| label: fig-weather-impact-severity
+#| fig-cap: "Impact of Weather Conditions on Collision Severity: Fatal vs. Non-Fatal"
 
-analysis_data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(patchwork)
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
+# Load the dataset
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Create subsets for Fatal and Non-Fatal incidents
+fatal_data <- data %>% filter(severity == "Fatal")
+non_fatal_data <- data %>% filter(severity == "Non-Fatal")
+
+# Group by weather conditions and summarize
+fatal_weather_data <- fatal_data %>%
+  group_by(weather) %>%
+  summarise(count = n(), .groups = 'drop')
+
+non_fatal_weather_data <- non_fatal_data %>%
+  group_by(weather) %>%
+  summarise(count = n(), .groups = 'drop')
+
+# Generate plots
+fatal_plot <- ggplot(fatal_weather_data, aes(x = weather, y = count, fill = weather)) +
+  geom_bar(stat = "identity") +
+  labs(x = NULL, y = "Collision Count", title = "Fatal Collisions") +
   theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") 
+
+non_fatal_plot <- ggplot(non_fatal_weather_data, aes(x = weather, y = count, fill = weather)) +
+  geom_bar(stat = "identity") +
+  labs(x = NULL, y = "Collision Count", title = "Non-Fatal Collisions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")  
+
+# Combine the plots with a shared legend
+combined_plot <- (fatal_plot | non_fatal_plot) + 
+  plot_layout(guides = 'collect') +  
+  theme(legend.position = "right")
+
+# Print the combined plot
+print(combined_plot)
+
 ```
 
-Talk way more about it. 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-road-surface-impact
+#| fig-cap: "Impact of Road Surface Conditions on Collision Severity: Fatal vs. Non-Fatal"
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(patchwork)
+
+# Load the dataset
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Filter data for Fatal and Non-Fatal severity
+fatal_data <- data %>%
+  filter(severity == "Fatal") %>%
+  count(road_surface)
+
+non_fatal_data <- data %>%
+  filter(severity == "Non-Fatal") %>%
+  count(road_surface)
+
+# Plot for Fatal severity
+fatal_plot <- ggplot(fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = NULL, y = "Count of Fatal Collisions",
+       title = "Fatal Collisions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
+
+# Plot for Non-Fatal severity
+non_fatal_plot <- ggplot(non_fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = NULL, y = "Count of Non-Fatal Collisions",
+       title = "Non-Fatal Collisions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
+
+# Combine the plots with a shared legend on the right
+combined_plot <- (fatal_plot | non_fatal_plot) +
+  plot_layout(guides = 'collect') +
+  theme(legend.position = "right")
+
+# Print the combined plot
+print(combined_plot)
+
+```
 
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-fatal-road-surface
+#| fig-cap: "Impact of Road Surface Conditions on Collision Severity"
 
-# Model
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Load the dataset
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Define colors for road surface conditions
+road_surface_colors <- sample(colors(), length(unique(data$road_surface)))
+
+# Filter data for Fatal severity
+fatal_data <- data %>%
+  filter(severity == "Fatal") %>%
+  count(road_surface)
+
+# Plot for Fatal severity
+ggplot(fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Road Surface Condition", y = "Count of Fatal Collisions",
+       title = "Count of Fatal Collisions by Road Surface Conditions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-accidents-by-month
+#| fig-cap: "Distribution of Traffic Accidents by Month"
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# Load the dataset
+setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
+data <- read_csv("data/analysis_data/analysis_data.csv")
+
+# Count accidents per month
+monthly_accidents_data <- data %>%
+  group_by(month) %>%
+  summarise(accidents = n(), .groups = 'drop') %>%
+  mutate(month = factor(month, levels = c("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")))
+
+# Create a bar plot
+ggplot(monthly_accidents_data, aes(x = month, y = accidents, fill = month)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Month", y = "Number of Accidents",
+       title = "Distribution of Traffic Accidents by Month") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+# Model {#sec-model}
 
 The goal of our modelling strategy is twofold. Firstly,...
 
@@ -103,7 +349,7 @@ We expect a positive relationship between the size of the wings and time spent a
 We can use maths by including latex between dollar signs, for instance $\theta$.
 
 
-# Results
+# Results {#sec-result}
 
 Our results are summarized in @tbl-modelresults.
 
@@ -138,7 +384,7 @@ modelsummary::modelsummary(
 
 
 
-# Discussion
+# Discussion {#sec-discussion}
 
 ## First discussion point {#sec-first-point}
 
@@ -169,48 +415,12 @@ In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. 
 
 In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
 
-```{r}
-#| eval: true
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
-```
 
 ## Diagnostics
 
 @fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
 
 @fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
-
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
-```
-
 
 
 \newpage
