@@ -1,0 +1,1001 @@
+year,age,gender,severity,person_position
+2019,26,Male,Non-Fatal,Driver
+2019,43,Female,Fatal,Unknown
+2019,46,Male,Non-Fatal,Driver
+2019,34,Female,Fatal,Rear Seat Passenger
+2019,54,Male,Non-Fatal,Rear Seat Passenger
+2019,80,Female,Non-Fatal,Driver
+2019,46,Male,Non-Fatal,Driver
+2019,67,Male,Non-Fatal,Front Seat Passenger
+2019,37,Female,Non-Fatal,Front Seat Passenger
+2019,36,Female,Non-Fatal,Rear Seat Passenger
+2019,20,Male,Unknown,Rear Seat Passenger
+2019,50,Male,Unknown,Unknown
+2019,36,Male,Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,52,Female,Non-Fatal,Front Seat Passenger
+2019,40,Male,Non-Fatal,Front Seat Passenger
+2019,20,Female,Non-Fatal,Rear Seat Passenger
+2019,67,Female,Non-Fatal,Driver
+2019,54,Male,Fatal,Driver
+2019,35,Male,Non-Fatal,Driver
+2019,21,Female,Non-Fatal,Driver
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,29,Female,Non-Fatal,Front Seat Passenger
+2019,57,Male,Non-Fatal,Driver
+2019,33,Male,Non-Fatal,Driver
+2019,19,Female,Non-Fatal,Driver
+2019,22,Male,Non-Fatal,Driver
+2019,19,Female,Non-Fatal,Driver
+2019,74,Female,Non-Fatal,Rear Seat Passenger
+2019,18,Female,Non-Fatal,Driver
+2019,37,Female,Non-Fatal,Front Seat Passenger
+2019,40,Male,Non-Fatal,Rear Seat Passenger
+2019,63,Female,Non-Fatal,Front Seat Passenger
+2019,62,Female,Non-Fatal,Driver
+2019,28,Male,Unknown,Driver
+2019,44,Female,Non-Fatal,Driver
+2019,67,Male,Non-Fatal,Driver
+2019,32,Male,Non-Fatal,Driver
+2019,42,Female,Non-Fatal,Driver
+2019,60,Male,Non-Fatal,Front Seat Passenger
+2019,19,Male,Non-Fatal,Front Seat Passenger
+2019,49,Male,Non-Fatal,Rear Seat Passenger
+2019,63,Female,Non-Fatal,Rear Seat Passenger
+2019,18,Female,Non-Fatal,Front Seat Passenger
+2019,65,Male,Fatal,Driver
+2019,63,Female,Non-Fatal,Driver
+2019,26,Female,Non-Fatal,Driver
+2019,65,Male,Non-Fatal,Front Seat Passenger
+2019,47,Female,Non-Fatal,Driver
+2019,41,Male,Non-Fatal,Driver
+2019,22,Male,Non-Fatal,Front Seat Passenger
+2019,39,Female,Non-Fatal,Driver
+2019,80,Female,Non-Fatal,Driver
+2019,38,Male,Non-Fatal,Front Seat Passenger
+2019,26,Male,Non-Fatal,Unknown
+2019,58,Female,Non-Fatal,Rear Seat Passenger
+2019,78,Male,Non-Fatal,Unknown
+2019,22,Female,Fatal,Driver
+2019,80,Female,Fatal,Driver
+2019,45,Female,Non-Fatal,Front Seat Passenger
+2019,23,Female,Non-Fatal,Driver
+2019,18,Female,Non-Fatal,Rear Seat Passenger
+2019,23,Male,Non-Fatal,Front Seat Passenger
+2019,45,Male,Non-Fatal,Driver
+2019,54,Male,Non-Fatal,Driver
+2019,50,Female,Unknown,Driver
+2019,73,Male,Non-Fatal,Unknown
+2019,25,Male,Non-Fatal,Driver
+2019,59,Male,Non-Fatal,Rear Seat Passenger
+2019,28,Female,Non-Fatal,Driver
+2019,33,Female,Non-Fatal,Front Seat Passenger
+2019,30,Male,Non-Fatal,Front Seat Passenger
+2019,39,Male,Non-Fatal,Front Seat Passenger
+2019,74,Male,Non-Fatal,Driver
+2019,58,Female,Non-Fatal,Driver
+2019,61,Male,Non-Fatal,Front Seat Passenger
+2019,45,Female,Non-Fatal,Driver
+2019,76,Male,Non-Fatal,Front Seat Passenger
+2019,28,Female,Non-Fatal,Front Seat Passenger
+2019,80,Female,Non-Fatal,Rear Seat Passenger
+2019,66,Female,Non-Fatal,Unknown
+2019,52,Female,Non-Fatal,Driver
+2019,61,Female,Fatal,Rear Seat Passenger
+2019,45,Female,Non-Fatal,Rear Seat Passenger
+2019,35,Male,Non-Fatal,Front Seat Passenger
+2019,52,Male,Non-Fatal,Driver
+2019,70,Male,Non-Fatal,Unknown
+2019,79,Male,Non-Fatal,Rear Seat Passenger
+2019,80,Female,Non-Fatal,Unknown
+2019,68,Female,Non-Fatal,Driver
+2019,27,Male,Non-Fatal,Driver
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,30,Female,Non-Fatal,Driver
+2019,28,Male,Non-Fatal,Front Seat Passenger
+2019,66,Male,Non-Fatal,Front Seat Passenger
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,28,Female,Fatal,Front Seat Passenger
+2019,45,Male,Non-Fatal,Front Seat Passenger
+2019,76,Female,Non-Fatal,Front Seat Passenger
+2019,67,Male,Unknown,Rear Seat Passenger
+2019,25,Female,Non-Fatal,Driver
+2019,57,Male,Non-Fatal,Rear Seat Passenger
+2019,65,Female,Non-Fatal,Driver
+2019,42,Female,Non-Fatal,Front Seat Passenger
+2019,25,Female,Non-Fatal,Driver
+2019,37,Female,Fatal,Driver
+2019,70,Female,Non-Fatal,Unknown
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,71,Male,Non-Fatal,Driver
+2019,20,Male,Non-Fatal,Front Seat Passenger
+2019,25,Male,Non-Fatal,Driver
+2019,69,Female,Non-Fatal,Driver
+2019,50,Female,Non-Fatal,Driver
+2019,21,Female,Non-Fatal,Driver
+2019,76,Female,Non-Fatal,Unknown
+2019,44,Male,Non-Fatal,Rear Seat Passenger
+2019,50,Male,Non-Fatal,Driver
+2019,34,Male,Non-Fatal,Driver
+2019,22,Female,Non-Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Front Seat Passenger
+2019,56,Male,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,36,Female,Non-Fatal,Front Seat Passenger
+2019,23,Female,Unknown,Driver
+2019,46,Female,Non-Fatal,Driver
+2019,78,Female,Non-Fatal,Front Seat Passenger
+2019,69,Female,Non-Fatal,Front Seat Passenger
+2019,23,Female,Non-Fatal,Driver
+2019,39,Female,Non-Fatal,Front Seat Passenger
+2019,21,Male,Non-Fatal,Driver
+2019,45,Female,Non-Fatal,Unknown
+2019,42,Female,Non-Fatal,Front Seat Passenger
+2019,64,Male,Non-Fatal,Rear Seat Passenger
+2019,66,Female,Non-Fatal,Unknown
+2019,58,Female,Non-Fatal,Rear Seat Passenger
+2019,28,Female,Non-Fatal,Front Seat Passenger
+2019,41,Male,Non-Fatal,Unknown
+2019,41,Female,Non-Fatal,Rear Seat Passenger
+2019,24,Female,Non-Fatal,Front Seat Passenger
+2019,77,Female,Non-Fatal,Driver
+2019,80,Female,Non-Fatal,Driver
+2019,48,Male,Non-Fatal,Rear Seat Passenger
+2019,46,Female,Non-Fatal,Driver
+2019,47,Female,Non-Fatal,Rear Seat Passenger
+2019,61,Male,Non-Fatal,Driver
+2019,68,Female,Non-Fatal,Rear Seat Passenger
+2019,59,Male,Non-Fatal,Driver
+2019,25,Female,Non-Fatal,Driver
+2019,66,Female,Non-Fatal,Front Seat Passenger
+2019,22,Female,Non-Fatal,Driver
+2019,64,Female,Non-Fatal,Front Seat Passenger
+2019,66,Female,Non-Fatal,Unknown
+2019,32,Female,Non-Fatal,Front Seat Passenger
+2019,27,Male,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,39,Female,Non-Fatal,Driver
+2019,24,Male,Non-Fatal,Front Seat Passenger
+2019,29,Female,Non-Fatal,Driver
+2019,63,Female,Fatal,Front Seat Passenger
+2019,54,Female,Unknown,Front Seat Passenger
+2019,66,Male,Non-Fatal,Driver
+2019,69,Female,Non-Fatal,Driver
+2019,34,Female,Non-Fatal,Rear Seat Passenger
+2019,60,Male,Non-Fatal,Rear Seat Passenger
+2019,71,Female,Non-Fatal,Driver
+2019,34,Male,Non-Fatal,Front Seat Passenger
+2019,50,Male,Non-Fatal,Driver
+2019,79,Female,Non-Fatal,Driver
+2019,38,Female,Fatal,Front Seat Passenger
+2019,58,Male,Non-Fatal,Front Seat Passenger
+2019,18,Female,Non-Fatal,Front Seat Passenger
+2019,65,Female,Non-Fatal,Driver
+2019,80,Male,Non-Fatal,Driver
+2019,39,Female,Non-Fatal,Front Seat Passenger
+2019,41,Male,Non-Fatal,Unknown
+2019,60,Female,Non-Fatal,Unknown
+2019,33,Male,Non-Fatal,Driver
+2019,45,Male,Non-Fatal,Rear Seat Passenger
+2019,65,Female,Non-Fatal,Rear Seat Passenger
+2019,40,Male,Non-Fatal,Driver
+2019,65,Male,Non-Fatal,Front Seat Passenger
+2019,46,Male,Fatal,Driver
+2019,34,Male,Non-Fatal,Driver
+2019,43,Male,Non-Fatal,Driver
+2019,24,Male,Fatal,Driver
+2019,29,Female,Non-Fatal,Front Seat Passenger
+2019,60,Female,Non-Fatal,Front Seat Passenger
+2019,63,Female,Non-Fatal,Driver
+2019,44,Male,Non-Fatal,Unknown
+2019,24,Male,Non-Fatal,Driver
+2019,66,Male,Non-Fatal,Rear Seat Passenger
+2019,63,Male,Non-Fatal,Front Seat Passenger
+2019,42,Male,Non-Fatal,Driver
+2019,59,Male,Non-Fatal,Front Seat Passenger
+2019,78,Female,Non-Fatal,Driver
+2019,78,Female,Non-Fatal,Unknown
+2019,45,Male,Unknown,Driver
+2019,25,Male,Non-Fatal,Driver
+2019,45,Male,Non-Fatal,Front Seat Passenger
+2019,39,Male,Non-Fatal,Rear Seat Passenger
+2019,35,Male,Non-Fatal,Unknown
+2019,20,Male,Non-Fatal,Rear Seat Passenger
+2019,70,Male,Non-Fatal,Rear Seat Passenger
+2019,50,Male,Unknown,Rear Seat Passenger
+2019,19,Male,Non-Fatal,Front Seat Passenger
+2019,66,Male,Non-Fatal,Front Seat Passenger
+2019,54,Female,Unknown,Front Seat Passenger
+2019,46,Female,Non-Fatal,Rear Seat Passenger
+2019,51,Female,Non-Fatal,Front Seat Passenger
+2019,55,Female,Non-Fatal,Rear Seat Passenger
+2019,20,Female,Non-Fatal,Driver
+2019,68,Male,Fatal,Driver
+2019,79,Male,Fatal,Driver
+2019,73,Male,Non-Fatal,Driver
+2019,65,Male,Non-Fatal,Front Seat Passenger
+2019,39,Female,Non-Fatal,Driver
+2019,39,Female,Non-Fatal,Rear Seat Passenger
+2019,33,Male,Fatal,Front Seat Passenger
+2019,69,Female,Non-Fatal,Driver
+2019,36,Male,Non-Fatal,Driver
+2019,71,Male,Non-Fatal,Unknown
+2019,25,Male,Non-Fatal,Rear Seat Passenger
+2019,31,Female,Non-Fatal,Rear Seat Passenger
+2019,24,Female,Non-Fatal,Rear Seat Passenger
+2019,74,Male,Non-Fatal,Driver
+2019,23,Male,Fatal,Driver
+2019,18,Female,Non-Fatal,Front Seat Passenger
+2019,52,Female,Non-Fatal,Rear Seat Passenger
+2019,36,Male,Non-Fatal,Driver
+2019,37,Female,Non-Fatal,Front Seat Passenger
+2019,52,Male,Non-Fatal,Driver
+2019,28,Female,Non-Fatal,Front Seat Passenger
+2019,49,Female,Non-Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Rear Seat Passenger
+2019,52,Male,Non-Fatal,Rear Seat Passenger
+2019,23,Male,Non-Fatal,Front Seat Passenger
+2019,75,Male,Non-Fatal,Front Seat Passenger
+2019,66,Male,Non-Fatal,Rear Seat Passenger
+2019,43,Female,Non-Fatal,Unknown
+2019,70,Female,Non-Fatal,Rear Seat Passenger
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,30,Male,Non-Fatal,Unknown
+2019,58,Male,Non-Fatal,Rear Seat Passenger
+2019,61,Female,Non-Fatal,Unknown
+2019,70,Male,Non-Fatal,Unknown
+2019,53,Male,Non-Fatal,Driver
+2019,57,Female,Fatal,Rear Seat Passenger
+2019,76,Male,Non-Fatal,Driver
+2019,44,Male,Non-Fatal,Driver
+2019,27,Male,Non-Fatal,Driver
+2019,35,Male,Non-Fatal,Driver
+2019,49,Female,Non-Fatal,Rear Seat Passenger
+2019,45,Female,Non-Fatal,Driver
+2019,76,Male,Non-Fatal,Unknown
+2019,41,Male,Non-Fatal,Driver
+2019,67,Male,Fatal,Front Seat Passenger
+2019,20,Female,Non-Fatal,Front Seat Passenger
+2019,42,Male,Non-Fatal,Unknown
+2019,80,Female,Non-Fatal,Front Seat Passenger
+2019,77,Male,Fatal,Driver
+2019,56,Male,Non-Fatal,Driver
+2019,48,Female,Non-Fatal,Front Seat Passenger
+2019,20,Female,Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,37,Female,Non-Fatal,Front Seat Passenger
+2019,72,Female,Fatal,Front Seat Passenger
+2019,73,Female,Non-Fatal,Front Seat Passenger
+2019,59,Male,Fatal,Driver
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,75,Male,Non-Fatal,Driver
+2019,72,Male,Non-Fatal,Driver
+2019,39,Female,Non-Fatal,Driver
+2019,28,Female,Non-Fatal,Unknown
+2019,26,Male,Non-Fatal,Front Seat Passenger
+2019,50,Female,Non-Fatal,Rear Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,68,Male,Non-Fatal,Unknown
+2019,26,Male,Non-Fatal,Driver
+2019,21,Male,Non-Fatal,Driver
+2019,49,Male,Non-Fatal,Unknown
+2019,26,Male,Fatal,Front Seat Passenger
+2019,68,Male,Fatal,Driver
+2019,38,Male,Non-Fatal,Rear Seat Passenger
+2019,26,Female,Non-Fatal,Front Seat Passenger
+2019,57,Male,Non-Fatal,Driver
+2019,19,Female,Non-Fatal,Driver
+2019,72,Female,Non-Fatal,Front Seat Passenger
+2019,18,Male,Unknown,Front Seat Passenger
+2019,44,Female,Non-Fatal,Driver
+2019,36,Female,Non-Fatal,Unknown
+2019,47,Female,Non-Fatal,Unknown
+2019,28,Male,Non-Fatal,Rear Seat Passenger
+2019,65,Male,Non-Fatal,Rear Seat Passenger
+2019,59,Male,Fatal,Driver
+2019,67,Male,Non-Fatal,Rear Seat Passenger
+2019,29,Male,Non-Fatal,Rear Seat Passenger
+2019,56,Male,Non-Fatal,Driver
+2019,42,Male,Non-Fatal,Driver
+2019,35,Female,Non-Fatal,Driver
+2019,49,Female,Non-Fatal,Driver
+2019,42,Male,Non-Fatal,Front Seat Passenger
+2019,71,Female,Non-Fatal,Driver
+2019,31,Female,Non-Fatal,Front Seat Passenger
+2019,51,Female,Non-Fatal,Rear Seat Passenger
+2019,60,Female,Non-Fatal,Front Seat Passenger
+2019,30,Female,Fatal,Rear Seat Passenger
+2019,67,Male,Non-Fatal,Driver
+2019,18,Male,Non-Fatal,Driver
+2019,31,Female,Non-Fatal,Driver
+2019,65,Male,Fatal,Front Seat Passenger
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,70,Female,Non-Fatal,Front Seat Passenger
+2019,33,Female,Non-Fatal,Driver
+2019,55,Female,Fatal,Rear Seat Passenger
+2019,40,Female,Non-Fatal,Front Seat Passenger
+2019,70,Male,Non-Fatal,Front Seat Passenger
+2019,56,Male,Non-Fatal,Unknown
+2019,41,Male,Non-Fatal,Rear Seat Passenger
+2019,52,Female,Non-Fatal,Rear Seat Passenger
+2019,42,Male,Non-Fatal,Unknown
+2019,46,Female,Non-Fatal,Front Seat Passenger
+2019,62,Male,Non-Fatal,Driver
+2019,32,Male,Non-Fatal,Unknown
+2019,75,Male,Non-Fatal,Driver
+2019,31,Male,Non-Fatal,Driver
+2019,56,Female,Non-Fatal,Driver
+2019,22,Female,Fatal,Front Seat Passenger
+2019,68,Male,Non-Fatal,Unknown
+2019,53,Male,Non-Fatal,Front Seat Passenger
+2019,55,Male,Non-Fatal,Front Seat Passenger
+2019,70,Male,Non-Fatal,Driver
+2019,24,Male,Non-Fatal,Unknown
+2019,68,Female,Non-Fatal,Front Seat Passenger
+2019,45,Male,Non-Fatal,Driver
+2019,38,Male,Fatal,Driver
+2019,58,Male,Non-Fatal,Unknown
+2019,79,Female,Non-Fatal,Rear Seat Passenger
+2019,27,Male,Fatal,Front Seat Passenger
+2019,32,Male,Fatal,Driver
+2019,72,Male,Non-Fatal,Driver
+2019,56,Male,Non-Fatal,Unknown
+2019,68,Male,Non-Fatal,Front Seat Passenger
+2019,77,Male,Non-Fatal,Rear Seat Passenger
+2019,25,Male,Unknown,Front Seat Passenger
+2019,22,Female,Non-Fatal,Rear Seat Passenger
+2019,40,Female,Non-Fatal,Unknown
+2019,24,Male,Non-Fatal,Front Seat Passenger
+2019,80,Female,Non-Fatal,Front Seat Passenger
+2019,29,Female,Fatal,Driver
+2019,63,Female,Non-Fatal,Front Seat Passenger
+2019,73,Female,Non-Fatal,Unknown
+2019,31,Female,Non-Fatal,Rear Seat Passenger
+2019,45,Female,Non-Fatal,Driver
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,33,Male,Non-Fatal,Driver
+2019,54,Female,Non-Fatal,Driver
+2019,72,Male,Non-Fatal,Front Seat Passenger
+2019,22,Female,Non-Fatal,Front Seat Passenger
+2019,36,Male,Non-Fatal,Front Seat Passenger
+2019,79,Male,Fatal,Driver
+2019,28,Male,Fatal,Rear Seat Passenger
+2019,71,Female,Non-Fatal,Driver
+2019,60,Male,Non-Fatal,Driver
+2019,27,Female,Non-Fatal,Front Seat Passenger
+2019,52,Male,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,68,Male,Non-Fatal,Unknown
+2019,21,Male,Non-Fatal,Front Seat Passenger
+2019,74,Female,Non-Fatal,Rear Seat Passenger
+2019,55,Male,Non-Fatal,Driver
+2019,33,Female,Non-Fatal,Front Seat Passenger
+2019,47,Female,Non-Fatal,Front Seat Passenger
+2019,74,Female,Non-Fatal,Front Seat Passenger
+2019,19,Male,Non-Fatal,Rear Seat Passenger
+2019,67,Female,Non-Fatal,Rear Seat Passenger
+2019,23,Female,Non-Fatal,Front Seat Passenger
+2019,36,Female,Unknown,Unknown
+2019,44,Male,Fatal,Driver
+2019,36,Female,Non-Fatal,Driver
+2019,71,Female,Non-Fatal,Unknown
+2019,66,Male,Non-Fatal,Driver
+2019,34,Male,Non-Fatal,Front Seat Passenger
+2019,67,Male,Non-Fatal,Driver
+2019,39,Male,Non-Fatal,Driver
+2019,18,Male,Non-Fatal,Unknown
+2019,80,Male,Unknown,Front Seat Passenger
+2019,44,Female,Non-Fatal,Driver
+2019,26,Female,Non-Fatal,Front Seat Passenger
+2019,49,Female,Non-Fatal,Front Seat Passenger
+2019,33,Male,Non-Fatal,Driver
+2019,24,Female,Non-Fatal,Driver
+2019,57,Male,Non-Fatal,Unknown
+2019,52,Male,Non-Fatal,Rear Seat Passenger
+2019,44,Female,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Unknown
+2019,53,Male,Non-Fatal,Rear Seat Passenger
+2019,80,Male,Non-Fatal,Driver
+2019,20,Male,Non-Fatal,Driver
+2019,45,Male,Non-Fatal,Rear Seat Passenger
+2019,30,Male,Non-Fatal,Front Seat Passenger
+2019,18,Male,Non-Fatal,Driver
+2019,74,Female,Non-Fatal,Rear Seat Passenger
+2019,56,Female,Non-Fatal,Front Seat Passenger
+2019,37,Male,Fatal,Driver
+2019,73,Male,Non-Fatal,Driver
+2019,55,Male,Fatal,Driver
+2019,36,Male,Unknown,Front Seat Passenger
+2019,34,Female,Non-Fatal,Driver
+2019,50,Female,Non-Fatal,Rear Seat Passenger
+2019,41,Female,Non-Fatal,Front Seat Passenger
+2019,78,Female,Non-Fatal,Front Seat Passenger
+2019,55,Female,Non-Fatal,Front Seat Passenger
+2019,62,Female,Fatal,Front Seat Passenger
+2019,28,Male,Non-Fatal,Front Seat Passenger
+2019,32,Female,Non-Fatal,Driver
+2019,74,Female,Non-Fatal,Driver
+2019,29,Female,Non-Fatal,Driver
+2019,54,Male,Non-Fatal,Driver
+2019,38,Female,Non-Fatal,Rear Seat Passenger
+2019,46,Female,Non-Fatal,Unknown
+2019,51,Male,Fatal,Rear Seat Passenger
+2019,76,Male,Non-Fatal,Unknown
+2019,80,Female,Non-Fatal,Driver
+2019,32,Female,Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,47,Male,Fatal,Driver
+2019,38,Female,Non-Fatal,Driver
+2019,54,Female,Fatal,Front Seat Passenger
+2019,55,Female,Non-Fatal,Driver
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,80,Male,Non-Fatal,Driver
+2019,21,Female,Non-Fatal,Driver
+2019,46,Female,Non-Fatal,Driver
+2019,77,Male,Non-Fatal,Front Seat Passenger
+2019,41,Male,Non-Fatal,Front Seat Passenger
+2019,27,Female,Non-Fatal,Driver
+2019,40,Female,Non-Fatal,Driver
+2019,40,Female,Non-Fatal,Driver
+2019,51,Male,Non-Fatal,Unknown
+2019,65,Male,Unknown,Rear Seat Passenger
+2019,29,Male,Non-Fatal,Unknown
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,38,Female,Non-Fatal,Front Seat Passenger
+2019,42,Female,Non-Fatal,Front Seat Passenger
+2019,58,Male,Non-Fatal,Front Seat Passenger
+2019,71,Male,Non-Fatal,Front Seat Passenger
+2019,80,Female,Non-Fatal,Driver
+2019,72,Male,Non-Fatal,Driver
+2019,32,Female,Non-Fatal,Unknown
+2019,61,Female,Non-Fatal,Front Seat Passenger
+2019,24,Female,Non-Fatal,Driver
+2019,41,Male,Non-Fatal,Front Seat Passenger
+2019,66,Male,Unknown,Driver
+2019,44,Female,Non-Fatal,Rear Seat Passenger
+2019,35,Female,Non-Fatal,Driver
+2019,21,Male,Non-Fatal,Front Seat Passenger
+2019,53,Female,Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Unknown
+2019,38,Male,Non-Fatal,Driver
+2019,56,Male,Non-Fatal,Driver
+2019,61,Female,Non-Fatal,Front Seat Passenger
+2019,48,Female,Non-Fatal,Front Seat Passenger
+2019,51,Male,Fatal,Driver
+2019,66,Male,Fatal,Driver
+2019,30,Female,Non-Fatal,Front Seat Passenger
+2019,47,Female,Non-Fatal,Driver
+2019,22,Male,Non-Fatal,Driver
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,51,Female,Non-Fatal,Driver
+2019,61,Male,Non-Fatal,Driver
+2019,64,Female,Non-Fatal,Driver
+2019,22,Male,Non-Fatal,Front Seat Passenger
+2019,74,Female,Fatal,Rear Seat Passenger
+2019,43,Male,Non-Fatal,Front Seat Passenger
+2019,79,Male,Non-Fatal,Driver
+2019,25,Male,Non-Fatal,Unknown
+2019,62,Female,Non-Fatal,Rear Seat Passenger
+2019,66,Male,Non-Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,63,Male,Non-Fatal,Driver
+2019,26,Female,Non-Fatal,Front Seat Passenger
+2019,72,Male,Non-Fatal,Rear Seat Passenger
+2019,46,Female,Non-Fatal,Front Seat Passenger
+2019,41,Male,Non-Fatal,Rear Seat Passenger
+2019,39,Male,Non-Fatal,Driver
+2019,22,Female,Fatal,Rear Seat Passenger
+2019,65,Female,Non-Fatal,Driver
+2019,52,Female,Non-Fatal,Rear Seat Passenger
+2019,19,Female,Non-Fatal,Front Seat Passenger
+2019,28,Female,Non-Fatal,Rear Seat Passenger
+2019,23,Male,Non-Fatal,Unknown
+2019,42,Male,Non-Fatal,Rear Seat Passenger
+2019,42,Female,Non-Fatal,Front Seat Passenger
+2019,51,Female,Non-Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Driver
+2019,58,Female,Non-Fatal,Rear Seat Passenger
+2019,73,Male,Non-Fatal,Rear Seat Passenger
+2019,27,Male,Non-Fatal,Driver
+2019,78,Female,Non-Fatal,Driver
+2019,51,Male,Non-Fatal,Front Seat Passenger
+2019,55,Male,Non-Fatal,Unknown
+2019,68,Female,Unknown,Front Seat Passenger
+2019,37,Female,Fatal,Driver
+2019,38,Female,Non-Fatal,Driver
+2019,56,Male,Non-Fatal,Driver
+2019,28,Female,Non-Fatal,Driver
+2019,25,Female,Non-Fatal,Driver
+2019,76,Female,Non-Fatal,Unknown
+2019,35,Female,Non-Fatal,Driver
+2019,64,Male,Non-Fatal,Driver
+2019,30,Female,Non-Fatal,Driver
+2019,47,Female,Non-Fatal,Rear Seat Passenger
+2019,35,Male,Non-Fatal,Front Seat Passenger
+2019,68,Female,Non-Fatal,Driver
+2019,35,Male,Fatal,Front Seat Passenger
+2019,58,Female,Non-Fatal,Unknown
+2019,57,Male,Non-Fatal,Rear Seat Passenger
+2019,74,Male,Non-Fatal,Rear Seat Passenger
+2019,74,Male,Non-Fatal,Unknown
+2019,23,Male,Non-Fatal,Driver
+2019,18,Female,Non-Fatal,Driver
+2019,22,Male,Fatal,Front Seat Passenger
+2019,44,Male,Non-Fatal,Front Seat Passenger
+2019,32,Male,Non-Fatal,Driver
+2019,74,Male,Non-Fatal,Rear Seat Passenger
+2019,34,Female,Non-Fatal,Driver
+2019,66,Female,Non-Fatal,Unknown
+2019,47,Male,Non-Fatal,Driver
+2019,25,Female,Non-Fatal,Unknown
+2019,55,Male,Non-Fatal,Rear Seat Passenger
+2019,30,Male,Non-Fatal,Unknown
+2019,74,Female,Non-Fatal,Front Seat Passenger
+2019,75,Male,Non-Fatal,Front Seat Passenger
+2019,64,Female,Non-Fatal,Driver
+2019,77,Female,Non-Fatal,Rear Seat Passenger
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,54,Male,Fatal,Driver
+2019,79,Male,Non-Fatal,Unknown
+2019,55,Female,Non-Fatal,Front Seat Passenger
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,18,Female,Fatal,Driver
+2019,32,Male,Non-Fatal,Unknown
+2019,65,Male,Non-Fatal,Front Seat Passenger
+2019,26,Male,Non-Fatal,Driver
+2019,78,Male,Unknown,Driver
+2019,40,Female,Non-Fatal,Rear Seat Passenger
+2019,28,Male,Unknown,Driver
+2019,40,Male,Non-Fatal,Unknown
+2019,47,Male,Non-Fatal,Driver
+2019,22,Female,Non-Fatal,Front Seat Passenger
+2019,44,Male,Non-Fatal,Driver
+2019,47,Male,Non-Fatal,Driver
+2019,39,Male,Fatal,Driver
+2019,76,Female,Fatal,Driver
+2019,31,Female,Non-Fatal,Driver
+2019,73,Female,Non-Fatal,Front Seat Passenger
+2019,45,Female,Non-Fatal,Driver
+2019,47,Male,Non-Fatal,Driver
+2019,60,Female,Non-Fatal,Driver
+2019,78,Male,Non-Fatal,Front Seat Passenger
+2019,50,Female,Non-Fatal,Rear Seat Passenger
+2019,75,Male,Non-Fatal,Unknown
+2019,30,Male,Non-Fatal,Rear Seat Passenger
+2019,32,Female,Non-Fatal,Driver
+2019,51,Female,Non-Fatal,Driver
+2019,66,Female,Non-Fatal,Driver
+2019,29,Female,Non-Fatal,Driver
+2019,67,Female,Non-Fatal,Rear Seat Passenger
+2019,39,Male,Unknown,Rear Seat Passenger
+2019,45,Female,Non-Fatal,Unknown
+2019,78,Male,Fatal,Unknown
+2019,23,Female,Non-Fatal,Driver
+2019,38,Male,Non-Fatal,Driver
+2019,71,Female,Non-Fatal,Driver
+2019,60,Male,Non-Fatal,Rear Seat Passenger
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,80,Male,Fatal,Driver
+2019,26,Female,Non-Fatal,Rear Seat Passenger
+2019,21,Male,Fatal,Driver
+2019,79,Male,Unknown,Driver
+2019,68,Male,Non-Fatal,Driver
+2019,40,Female,Non-Fatal,Front Seat Passenger
+2019,68,Male,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Unknown
+2019,77,Female,Non-Fatal,Unknown
+2019,33,Male,Non-Fatal,Driver
+2019,47,Male,Unknown,Rear Seat Passenger
+2019,74,Female,Non-Fatal,Driver
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,45,Female,Fatal,Front Seat Passenger
+2019,42,Male,Non-Fatal,Driver
+2019,41,Female,Non-Fatal,Front Seat Passenger
+2019,72,Male,Non-Fatal,Front Seat Passenger
+2019,27,Male,Non-Fatal,Front Seat Passenger
+2019,36,Male,Non-Fatal,Rear Seat Passenger
+2019,19,Male,Non-Fatal,Driver
+2019,59,Female,Non-Fatal,Driver
+2019,29,Female,Non-Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Front Seat Passenger
+2019,35,Female,Non-Fatal,Front Seat Passenger
+2019,54,Female,Non-Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Driver
+2019,37,Female,Unknown,Front Seat Passenger
+2019,63,Male,Fatal,Rear Seat Passenger
+2019,23,Male,Non-Fatal,Driver
+2019,24,Female,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Driver
+2019,30,Male,Non-Fatal,Front Seat Passenger
+2019,76,Female,Non-Fatal,Front Seat Passenger
+2019,66,Male,Non-Fatal,Rear Seat Passenger
+2019,23,Female,Non-Fatal,Rear Seat Passenger
+2019,74,Female,Non-Fatal,Unknown
+2019,36,Male,Fatal,Front Seat Passenger
+2019,54,Female,Non-Fatal,Unknown
+2019,40,Female,Non-Fatal,Driver
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,45,Male,Non-Fatal,Driver
+2019,18,Female,Non-Fatal,Front Seat Passenger
+2019,46,Male,Non-Fatal,Unknown
+2019,50,Male,Non-Fatal,Unknown
+2019,34,Female,Non-Fatal,Front Seat Passenger
+2019,38,Male,Non-Fatal,Front Seat Passenger
+2019,42,Female,Non-Fatal,Driver
+2019,38,Male,Fatal,Driver
+2019,54,Female,Non-Fatal,Driver
+2019,34,Male,Non-Fatal,Driver
+2019,76,Male,Fatal,Driver
+2019,36,Male,Non-Fatal,Rear Seat Passenger
+2019,33,Male,Fatal,Driver
+2019,49,Female,Non-Fatal,Driver
+2019,55,Male,Non-Fatal,Front Seat Passenger
+2019,57,Female,Non-Fatal,Rear Seat Passenger
+2019,70,Male,Non-Fatal,Front Seat Passenger
+2019,29,Female,Non-Fatal,Driver
+2019,61,Female,Fatal,Front Seat Passenger
+2019,46,Female,Non-Fatal,Driver
+2019,49,Female,Non-Fatal,Rear Seat Passenger
+2019,30,Female,Fatal,Driver
+2019,48,Male,Non-Fatal,Driver
+2019,44,Male,Non-Fatal,Front Seat Passenger
+2019,62,Female,Non-Fatal,Front Seat Passenger
+2019,38,Female,Non-Fatal,Driver
+2019,25,Male,Non-Fatal,Front Seat Passenger
+2019,48,Male,Non-Fatal,Front Seat Passenger
+2019,19,Female,Non-Fatal,Driver
+2019,27,Female,Non-Fatal,Unknown
+2019,49,Female,Non-Fatal,Rear Seat Passenger
+2019,73,Female,Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Rear Seat Passenger
+2019,33,Female,Non-Fatal,Front Seat Passenger
+2019,70,Male,Non-Fatal,Front Seat Passenger
+2019,61,Male,Non-Fatal,Driver
+2019,19,Female,Non-Fatal,Driver
+2019,48,Female,Fatal,Front Seat Passenger
+2019,77,Female,Non-Fatal,Unknown
+2019,37,Female,Non-Fatal,Driver
+2019,74,Female,Non-Fatal,Rear Seat Passenger
+2019,27,Male,Non-Fatal,Driver
+2019,54,Female,Unknown,Driver
+2019,67,Female,Non-Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Driver
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,38,Male,Non-Fatal,Driver
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,34,Male,Non-Fatal,Driver
+2019,48,Female,Non-Fatal,Front Seat Passenger
+2019,21,Male,Non-Fatal,Rear Seat Passenger
+2019,44,Male,Non-Fatal,Driver
+2019,44,Female,Non-Fatal,Front Seat Passenger
+2019,49,Male,Unknown,Driver
+2019,45,Female,Non-Fatal,Driver
+2019,22,Male,Non-Fatal,Rear Seat Passenger
+2019,58,Male,Non-Fatal,Unknown
+2019,38,Male,Non-Fatal,Front Seat Passenger
+2019,57,Male,Non-Fatal,Rear Seat Passenger
+2019,63,Male,Non-Fatal,Rear Seat Passenger
+2019,26,Female,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Rear Seat Passenger
+2019,73,Male,Fatal,Driver
+2019,36,Female,Non-Fatal,Rear Seat Passenger
+2019,31,Male,Non-Fatal,Unknown
+2019,69,Male,Non-Fatal,Driver
+2019,51,Male,Non-Fatal,Front Seat Passenger
+2019,48,Male,Non-Fatal,Driver
+2019,77,Male,Non-Fatal,Front Seat Passenger
+2019,48,Female,Non-Fatal,Front Seat Passenger
+2019,56,Male,Non-Fatal,Front Seat Passenger
+2019,37,Male,Non-Fatal,Rear Seat Passenger
+2019,65,Female,Non-Fatal,Driver
+2019,52,Female,Non-Fatal,Front Seat Passenger
+2019,20,Male,Non-Fatal,Unknown
+2019,66,Female,Non-Fatal,Unknown
+2019,76,Male,Unknown,Front Seat Passenger
+2019,77,Male,Non-Fatal,Unknown
+2019,55,Male,Non-Fatal,Driver
+2019,63,Male,Non-Fatal,Driver
+2019,80,Female,Non-Fatal,Unknown
+2019,33,Male,Fatal,Rear Seat Passenger
+2019,24,Female,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Driver
+2019,55,Male,Fatal,Unknown
+2019,69,Male,Non-Fatal,Driver
+2019,57,Female,Non-Fatal,Unknown
+2019,53,Male,Non-Fatal,Driver
+2019,47,Female,Non-Fatal,Driver
+2019,70,Male,Non-Fatal,Front Seat Passenger
+2019,48,Male,Non-Fatal,Rear Seat Passenger
+2019,52,Female,Non-Fatal,Driver
+2019,72,Female,Non-Fatal,Rear Seat Passenger
+2019,59,Female,Non-Fatal,Front Seat Passenger
+2019,73,Female,Non-Fatal,Rear Seat Passenger
+2019,18,Female,Non-Fatal,Driver
+2019,19,Male,Non-Fatal,Front Seat Passenger
+2019,39,Male,Non-Fatal,Driver
+2019,65,Female,Non-Fatal,Driver
+2019,55,Male,Non-Fatal,Front Seat Passenger
+2019,75,Male,Non-Fatal,Front Seat Passenger
+2019,75,Female,Non-Fatal,Driver
+2019,70,Female,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,43,Male,Non-Fatal,Front Seat Passenger
+2019,42,Male,Non-Fatal,Front Seat Passenger
+2019,64,Female,Non-Fatal,Driver
+2019,73,Male,Non-Fatal,Rear Seat Passenger
+2019,52,Male,Non-Fatal,Rear Seat Passenger
+2019,58,Male,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,28,Male,Non-Fatal,Rear Seat Passenger
+2019,47,Female,Non-Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Unknown
+2019,23,Male,Unknown,Rear Seat Passenger
+2019,54,Male,Fatal,Driver
+2019,24,Male,Non-Fatal,Rear Seat Passenger
+2019,71,Male,Non-Fatal,Front Seat Passenger
+2019,54,Male,Fatal,Rear Seat Passenger
+2019,52,Female,Non-Fatal,Rear Seat Passenger
+2019,57,Female,Non-Fatal,Front Seat Passenger
+2019,46,Female,Non-Fatal,Front Seat Passenger
+2019,45,Female,Non-Fatal,Driver
+2019,25,Female,Non-Fatal,Driver
+2019,65,Male,Non-Fatal,Rear Seat Passenger
+2019,74,Male,Non-Fatal,Rear Seat Passenger
+2019,61,Male,Non-Fatal,Rear Seat Passenger
+2019,65,Male,Non-Fatal,Front Seat Passenger
+2019,37,Male,Unknown,Driver
+2019,51,Male,Non-Fatal,Driver
+2019,78,Male,Non-Fatal,Unknown
+2019,73,Male,Non-Fatal,Driver
+2019,58,Male,Non-Fatal,Driver
+2019,66,Male,Fatal,Front Seat Passenger
+2019,43,Male,Non-Fatal,Driver
+2019,74,Male,Non-Fatal,Front Seat Passenger
+2019,49,Female,Non-Fatal,Rear Seat Passenger
+2019,69,Male,Non-Fatal,Rear Seat Passenger
+2019,22,Female,Non-Fatal,Rear Seat Passenger
+2019,68,Female,Non-Fatal,Driver
+2019,34,Male,Non-Fatal,Front Seat Passenger
+2019,64,Female,Fatal,Front Seat Passenger
+2019,62,Female,Non-Fatal,Unknown
+2019,43,Female,Non-Fatal,Driver
+2019,55,Female,Non-Fatal,Rear Seat Passenger
+2019,26,Male,Non-Fatal,Front Seat Passenger
+2019,36,Female,Fatal,Rear Seat Passenger
+2019,66,Male,Non-Fatal,Front Seat Passenger
+2019,59,Female,Non-Fatal,Front Seat Passenger
+2019,48,Female,Fatal,Driver
+2019,42,Female,Non-Fatal,Unknown
+2019,57,Female,Non-Fatal,Driver
+2019,46,Male,Non-Fatal,Driver
+2019,38,Male,Non-Fatal,Driver
+2019,40,Male,Unknown,Driver
+2019,28,Female,Non-Fatal,Driver
+2019,44,Male,Unknown,Rear Seat Passenger
+2019,53,Female,Unknown,Driver
+2019,33,Male,Non-Fatal,Driver
+2019,36,Male,Non-Fatal,Rear Seat Passenger
+2019,24,Male,Non-Fatal,Driver
+2019,60,Male,Non-Fatal,Driver
+2019,36,Female,Fatal,Front Seat Passenger
+2019,60,Female,Non-Fatal,Unknown
+2019,32,Female,Non-Fatal,Rear Seat Passenger
+2019,69,Male,Fatal,Rear Seat Passenger
+2019,64,Female,Non-Fatal,Front Seat Passenger
+2019,18,Male,Non-Fatal,Driver
+2019,59,Female,Non-Fatal,Driver
+2019,61,Female,Non-Fatal,Driver
+2019,43,Male,Non-Fatal,Front Seat Passenger
+2019,74,Male,Fatal,Unknown
+2019,45,Male,Non-Fatal,Front Seat Passenger
+2019,32,Female,Non-Fatal,Rear Seat Passenger
+2019,53,Female,Non-Fatal,Driver
+2019,80,Female,Non-Fatal,Front Seat Passenger
+2019,79,Female,Non-Fatal,Driver
+2019,22,Female,Non-Fatal,Driver
+2019,65,Male,Fatal,Driver
+2019,53,Male,Non-Fatal,Front Seat Passenger
+2019,63,Female,Non-Fatal,Driver
+2019,66,Male,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Driver
+2019,19,Male,Non-Fatal,Driver
+2019,78,Male,Non-Fatal,Front Seat Passenger
+2019,64,Male,Non-Fatal,Driver
+2019,52,Male,Non-Fatal,Rear Seat Passenger
+2019,54,Female,Non-Fatal,Unknown
+2019,20,Female,Non-Fatal,Driver
+2019,29,Female,Non-Fatal,Front Seat Passenger
+2019,55,Male,Non-Fatal,Driver
+2019,54,Female,Non-Fatal,Rear Seat Passenger
+2019,52,Female,Non-Fatal,Front Seat Passenger
+2019,26,Female,Non-Fatal,Driver
+2019,42,Female,Non-Fatal,Rear Seat Passenger
+2019,64,Female,Non-Fatal,Rear Seat Passenger
+2019,46,Female,Fatal,Driver
+2019,42,Female,Non-Fatal,Unknown
+2019,18,Male,Non-Fatal,Rear Seat Passenger
+2019,70,Male,Non-Fatal,Front Seat Passenger
+2019,80,Male,Non-Fatal,Rear Seat Passenger
+2019,44,Male,Fatal,Driver
+2019,65,Female,Non-Fatal,Driver
+2019,41,Male,Non-Fatal,Front Seat Passenger
+2019,18,Male,Non-Fatal,Driver
+2019,31,Female,Non-Fatal,Front Seat Passenger
+2019,19,Male,Non-Fatal,Front Seat Passenger
+2019,70,Female,Non-Fatal,Front Seat Passenger
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,22,Male,Non-Fatal,Driver
+2019,54,Male,Unknown,Front Seat Passenger
+2019,75,Male,Non-Fatal,Front Seat Passenger
+2019,36,Male,Non-Fatal,Driver
+2019,65,Female,Non-Fatal,Driver
+2019,62,Male,Non-Fatal,Driver
+2019,27,Male,Non-Fatal,Unknown
+2019,55,Female,Non-Fatal,Rear Seat Passenger
+2019,30,Male,Non-Fatal,Rear Seat Passenger
+2019,73,Male,Non-Fatal,Rear Seat Passenger
+2019,53,Male,Fatal,Front Seat Passenger
+2019,74,Male,Non-Fatal,Rear Seat Passenger
+2019,69,Male,Non-Fatal,Unknown
+2019,66,Male,Non-Fatal,Driver
+2019,51,Female,Non-Fatal,Driver
+2019,25,Female,Non-Fatal,Rear Seat Passenger
+2019,23,Female,Non-Fatal,Unknown
+2019,62,Female,Non-Fatal,Rear Seat Passenger
+2019,72,Female,Non-Fatal,Front Seat Passenger
+2019,80,Male,Fatal,Rear Seat Passenger
+2019,23,Male,Non-Fatal,Driver
+2019,47,Male,Non-Fatal,Front Seat Passenger
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,34,Male,Non-Fatal,Driver
+2019,48,Male,Non-Fatal,Driver
+2019,48,Female,Non-Fatal,Driver
+2019,26,Male,Non-Fatal,Front Seat Passenger
+2019,47,Male,Non-Fatal,Driver
+2019,70,Male,Non-Fatal,Driver
+2019,33,Male,Non-Fatal,Driver
+2019,31,Male,Fatal,Driver
+2019,74,Male,Non-Fatal,Front Seat Passenger
+2019,55,Female,Fatal,Driver
+2019,49,Female,Fatal,Front Seat Passenger
+2019,50,Male,Non-Fatal,Front Seat Passenger
+2019,18,Male,Non-Fatal,Front Seat Passenger
+2019,23,Male,Non-Fatal,Front Seat Passenger
+2019,38,Male,Non-Fatal,Driver
+2019,19,Male,Non-Fatal,Rear Seat Passenger
+2019,18,Female,Unknown,Front Seat Passenger
+2019,55,Male,Non-Fatal,Driver
+2019,78,Female,Non-Fatal,Driver
+2019,77,Female,Fatal,Driver
+2019,80,Female,Non-Fatal,Rear Seat Passenger
+2019,23,Female,Non-Fatal,Rear Seat Passenger
+2019,44,Male,Fatal,Rear Seat Passenger
+2019,59,Male,Non-Fatal,Front Seat Passenger
+2019,40,Female,Non-Fatal,Driver
+2019,63,Female,Fatal,Front Seat Passenger
+2019,45,Male,Non-Fatal,Front Seat Passenger
+2019,19,Female,Unknown,Front Seat Passenger
+2019,78,Male,Fatal,Driver
+2019,63,Male,Non-Fatal,Front Seat Passenger
+2019,26,Male,Non-Fatal,Rear Seat Passenger
+2019,37,Male,Non-Fatal,Unknown
+2019,72,Male,Non-Fatal,Unknown
+2019,30,Female,Unknown,Driver
+2019,37,Male,Non-Fatal,Driver
+2019,34,Female,Non-Fatal,Rear Seat Passenger
+2019,39,Female,Non-Fatal,Unknown
+2019,31,Female,Non-Fatal,Front Seat Passenger
+2019,47,Male,Fatal,Rear Seat Passenger
+2019,72,Female,Fatal,Driver
+2019,57,Female,Non-Fatal,Driver
+2019,48,Male,Non-Fatal,Front Seat Passenger
+2019,50,Female,Non-Fatal,Driver
+2019,44,Male,Non-Fatal,Driver
+2019,59,Male,Non-Fatal,Driver
+2019,60,Female,Non-Fatal,Front Seat Passenger
+2019,59,Male,Non-Fatal,Driver
+2019,52,Male,Non-Fatal,Driver
+2019,28,Female,Non-Fatal,Driver
+2019,33,Male,Non-Fatal,Driver
+2019,53,Female,Non-Fatal,Driver
+2019,32,Male,Non-Fatal,Driver
+2019,32,Male,Non-Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Front Seat Passenger
+2019,44,Female,Non-Fatal,Front Seat Passenger
+2019,31,Male,Non-Fatal,Driver
+2019,45,Male,Non-Fatal,Unknown
+2019,39,Female,Non-Fatal,Driver
+2019,65,Female,Non-Fatal,Driver
+2019,21,Female,Non-Fatal,Rear Seat Passenger
+2019,46,Female,Non-Fatal,Unknown
+2019,53,Male,Non-Fatal,Driver
+2019,53,Female,Non-Fatal,Unknown
+2019,79,Male,Non-Fatal,Rear Seat Passenger
+2019,33,Male,Non-Fatal,Front Seat Passenger
+2019,72,Female,Fatal,Rear Seat Passenger
+2019,43,Male,Non-Fatal,Front Seat Passenger
+2019,40,Male,Non-Fatal,Driver
+2019,61,Male,Non-Fatal,Driver
+2019,31,Female,Non-Fatal,Unknown
+2019,48,Female,Non-Fatal,Driver
+2019,47,Male,Non-Fatal,Driver
+2019,37,Female,Non-Fatal,Front Seat Passenger
+2019,79,Male,Non-Fatal,Driver
+2019,75,Female,Non-Fatal,Driver
+2019,59,Female,Non-Fatal,Driver
+2019,65,Female,Non-Fatal,Driver
+2019,49,Male,Non-Fatal,Front Seat Passenger
+2019,37,Male,Non-Fatal,Driver
+2019,69,Female,Fatal,Driver
+2019,53,Female,Non-Fatal,Rear Seat Passenger
+2019,28,Male,Unknown,Front Seat Passenger
+2019,24,Male,Fatal,Rear Seat Passenger
+2019,21,Male,Non-Fatal,Unknown
+2019,62,Male,Non-Fatal,Front Seat Passenger
+2019,71,Female,Non-Fatal,Rear Seat Passenger
+2019,66,Female,Non-Fatal,Rear Seat Passenger
+2019,21,Male,Non-Fatal,Driver
+2019,80,Female,Non-Fatal,Front Seat Passenger
+2019,52,Male,Non-Fatal,Front Seat Passenger
+2019,59,Female,Non-Fatal,Rear Seat Passenger
+2019,25,Female,Non-Fatal,Rear Seat Passenger
+2019,50,Female,Non-Fatal,Driver
+2019,23,Male,Non-Fatal,Front Seat Passenger
+2019,68,Female,Non-Fatal,Rear Seat Passenger
+2019,49,Male,Non-Fatal,Rear Seat Passenger
+2019,75,Female,Non-Fatal,Front Seat Passenger
+2019,66,Female,Non-Fatal,Front Seat Passenger
+2019,18,Male,Non-Fatal,Driver
+2019,69,Male,Non-Fatal,Front Seat Passenger
+2019,57,Female,Non-Fatal,Front Seat Passenger
+2019,78,Male,Non-Fatal,Rear Seat Passenger
+2019,55,Female,Non-Fatal,Driver
+2019,37,Female,Non-Fatal,Driver
+2019,65,Male,Non-Fatal,Driver
+2019,50,Female,Non-Fatal,Front Seat Passenger
+2019,72,Female,Non-Fatal,Driver
+2019,70,Male,Non-Fatal,Rear Seat Passenger
+2019,69,Female,Non-Fatal,Unknown
+2019,32,Male,Non-Fatal,Driver
+2019,23,Male,Non-Fatal,Driver
+2019,56,Female,Non-Fatal,Driver
+2019,75,Male,Non-Fatal,Front Seat Passenger
+2019,43,Male,Non-Fatal,Unknown
+2019,28,Male,Non-Fatal,Driver
+2019,51,Female,Non-Fatal,Driver
+2019,53,Female,Non-Fatal,Driver
+2019,42,Male,Non-Fatal,Front Seat Passenger
+2019,55,Female,Non-Fatal,Front Seat Passenger
+2019,39,Male,Non-Fatal,Driver
+2019,42,Female,Non-Fatal,Driver
+2019,37,Male,Non-Fatal,Driver
+2019,55,Female,Non-Fatal,Driver
+2019,74,Female,Unknown,Driver
+2019,53,Male,Non-Fatal,Unknown
+2019,20,Female,Non-Fatal,Rear Seat Passenger
+2019,54,Female,Non-Fatal,Driver
+2019,74,Female,Non-Fatal,Driver
+2019,24,Male,Non-Fatal,Driver
+2019,22,Female,Non-Fatal,Front Seat Passenger
+2019,19,Female,Fatal,Front Seat Passenger
+2019,47,Male,Non-Fatal,Driver
+2019,18,Male,Non-Fatal,Front Seat Passenger
+2019,19,Male,Non-Fatal,Front Seat Passenger
+2019,30,Female,Non-Fatal,Rear Seat Passenger
+2019,28,Male,Non-Fatal,Driver
+2019,51,Female,Non-Fatal,Rear Seat Passenger
+2019,66,Male,Non-Fatal,Driver
+2019,62,Male,Non-Fatal,Rear Seat Passenger
+2019,41,Male,Non-Fatal,Rear Seat Passenger
+2019,20,Female,Non-Fatal,Driver
+2019,66,Male,Non-Fatal,Driver
+2019,48,Female,Non-Fatal,Driver
+2019,33,Female,Non-Fatal,Driver
+2019,63,Male,Non-Fatal,Front Seat Passenger
+2019,43,Male,Fatal,Driver
+2019,73,Female,Non-Fatal,Driver
