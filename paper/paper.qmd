@@ -5,84 +5,139 @@ author:
 thanks: "Code and data are available at: https://github.com/Sinanma/Traffic_Collision_Analysis.git."
 date: today
 date-format: long
-abstract: "This study examines the dynamics of traffic collisions across Canada for the year 2019, employing an extensive dataset retrieved from Open Canada's national collision database. Through robust data cleaning and analysis, we identified critical factors contributing to the severity of traffic accidents, encapsulating demographic variables, environmental conditions, and temporal patterns. The methodology centered on a comprehensive examination of collision records, integrating Bayesian statistical models to interpret the nuanced interplay between predictors such as age, gender, weather, and road surface conditions. The results illuminate significant correlations, with adverse weather and certain road conditions markedly increasing the likelihood of fatal outcomes. These findings offer valuable insights into preventive measures and policy-making, aiming to enhance road safety and reduce the incidence of traffic-related fatalities. The implications of this research underscore the necessity for targeted interventions and bolster the framework for data-driven decision-making in national traffic management and infrastructure planning."
+abstract: "This study analyzes traffic collision rates in Canada by examining the 2019 National Collision Database and Driver's License Statistics, employing a Bayesian regression model. Results show that drivers aged 16-24 have the highest accident rates, and males are involved in collisions more frequently than females. These insights emphasize the need for educational programs and policy adjustments that specifically address young and male drivers to reduce their risk. By pinpointing these demographic risk factors, the research supports the development of effective safety measures, aiming to lower traffic-related injuries and deaths."
 format: pdf
-output:
-  pdf_document:
-    toc: true
-    toc_depth: 2
+toc: true
+number-sections: true
 bibliography: references.bib
 ---
 
-```{r}
-#| include: false
-#| warning: false
-#| message: false
-
-library(tidyverse)
-library(palmerpenguins)
-```
-
-
 # Introduction
 
-Road traffic injuries represent a global public health crisis, claiming approximately 1.19 million lives annually and ranking as the leading cause of death among children and young adults aged 5–29 years [@WHO2023]. These staggering figures from the World Health Organization underscore the urgent need for concerted efforts in traffic collision research and policy intervention. In Canada, the intricacies of traffic incidents captured within the 2019 national collision dataset open a window into understanding these tragedies at a granular level. This research harnesses the depth of this data to unravel the demographic determinants—age, gender, and seating position—that predispose individuals to varying collision severity outcomes.
+Road traffic injuries are a public health issue, claiming approximately 1.19 million lives globally every year and being the leading cause cause of death among children and young adults aged 5–29 years. Highlighted by the World Health Organization, these statistics illustrate the critical need for further research and effective policy making in traffic safety [@WHO2023]. In Canada, the complexity of traffic incidents is detailed within the 2019 national collision dataset, which provides insights into the demographic factors-age, gender- that influence the severity of these events. 
 
-This study delves into statistical methodologies to decode the patterns embedded within the incidents, mapping out the demographic landscape of traffic collision severity. Utilizing a sophisticated Bayesian regression model, implemented through R—a comprehensive environment for statistical computing and graphics [@citeR], we dissect large-scale data to articulate the distinct demographic factors that significantly modulate the likelihood of severe traffic collisions. The methodology and analytical strategies employed are learned from *Telling Stories with Data* by Rohan Alexander [@tellingstorieswithdata], which provides the statistical framework and R code that underpin our analysis.
+This study is focusing on the impact of demographic factors such as age and gender on traffic collision rates. Utilizing a Bayesian statistical model to provide accurate estimates of these effects, implemented through R—a comprehensive environment for statistical computing and graphics [@citeR]. The methodology and analytical strategies employed are learned from *Telling Stories with Data* by Rohan Alexander [@tellingstorieswithdata], which provides the statistical framework and R code that underpin our analysis.
 
+The estimand of this paper is the effect of these demographic variables—age and gender—on the severity of traffic incidents. By focusing exclusively on these factors, this research aims to isolate and quantify their specific impacts, offering detail into how demographic characteristics modulate collision outcomes.
 
-The estimand of this paper is the nuanced effect of these demographic variables—age, gender, and seating position—on the severity of traffic incidents, with a focus on the contextual interplay of environmental conditions such as weather and road surfaces.
+The findings reveal variances in accident rates by age and gender: younger drivers (aged 16-24) exhibit the highest accident rates, while older drivers (65 and above) show the lowest, which suggests differing risk levels associated with driver experience. Additionally, male drivers are found to have higher accident rates than female drivers, indicating potentially riskier driving behaviors or greater exposure to traffic due to occupational demands.
 
-Our investigation is vital for an array of stakeholders, from traffic safety regulators to urban planners and the public at large. Traditional traffic studies have often overlooked the multifaceted relationships inherent within demographic data and collision severity. This study fills this lacuna by employing a robust Bayesian approach, thereby enabling precise inferences on the complex interdependencies at play. The insights gleaned offer a potent tool for devising tailored preventive measures and enhancing road safety strategies, with the potential to mitigate the human and economic toll of traffic collisions.
+This study provides insights for traffic safety regulators, urban planners, and policymakers by detailed understandings of the demographic factors that significantly influence traffic accidents, which is essential for developing targeted interventions designed to reduce traffic-related injuries and fatalities.
 
-Our findings present a nuanced analysis of collision severity disparities across various demographics. This study reveals the differential patterns of collision impacts among age groups, genders, and occupants based on their seating positions within vehicles. We discover the heightened risk factors associated with specific demographics, offering a critical assessment of the stereotypes surrounding vehicular accidents and safety measures.
-
-The significance of this study transcends academic boundaries, providing actionable insights for strategic safety enhancements. It sheds light on the demographic dynamics that influenced Canadian traffic collisions in 2019, aiding the development of informed and effective interventions to reduce road traffic injuries and fatalities.
-
-The paper begins by introducing the broader context and motivation behind our study. @sec-data introduces the dataset utilized for analysis, explores the dataset and key variables, enhanced by visual data representations. @sec-model describes the Bayesian regression model used to analyze these factors, elucidating its relevance and utility. @sec-results presents the findings, offering detailed interpretations of the data. @sec-discussion discusses the implications, study limitations, and potential future research directions.
+The paper begins by introducing the broader context and motivation behind our study. @sec-data introduces the dataset utilized for analysis, explores the dataset and key variables, supported by visualization. @sec-model describes the use of the Bayesian regression model. @sec-results presents the findings, offering detailed interpretations of the data. @sec-discussion discusses the implications, study limitations, and directions for future research.
 
 
 # Data {#sec-data}
 
-This research utilizes the 2019 National Collision Database, publicly available via Open Canada's data portal. The dataset encompasses detailed records of traffic collisions throughout Canada, capturing various environmental and demographic factors associated with each incident. The comprehensive dataset for 2019 can be accessed directly through [National Collision Database](https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/download/2019_dataset_en.csv) [@Canada2019CollisionData], and additional details about the dataset are available on its main overview page [here](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a) [@Canada2019Dataset].
+This paper uses two datasets from Open Canada's data portal. The first is the **National Collision Database** which provides records of traffic collisions across Canada, including various environmental and demographic factors related to each incident. The complete dataset for 2019 is available at [National Collision Database](https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/download/2019_dataset_en.csv) [@Canada2019CollisionData], with further details provided on its [main overview page](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a) [@Canada2019Dataset].
+
+The second dataset, **Permis de Conduire**, offers demographic distribution of drivers. This can be accessed through [Permis de Conduire 2019](https://dq-prd-bucket1.s3.ca-central-1.amazonaws.com/saaq/Permis_Conduire_2019.csv) [@permis-conduire-2019] and further explored on its [overview page](https://open.canada.ca/data/en/dataset/f2269058-2c30-483c-8a83-ad7862ae860a/resource/4413d5df-50a2-4f86-afcd-0923cff51003) [@canada-opendata-transport].
+
+Data was collected, analyzed, tested, and visualized using R statistical programming software [@citeR], with packages: `tidyverse` [@citetidyverse], `rstanarm` [@citerstanarm] `knitr` [@citeKnitr], `here` [@citehere], `janitor` [@citejanitor], `lubridate` [@citelubridate], `arrow` [@citearrow], `dply` [@citedply], `readr` [@citereadr], `ggplot2` [@citeggplot2], `testthat` [@citetestthat], and `scales` [@citescales].
 
 ## Dataset Description
 
-The 2019 dataset provides extensive data points for over 200,000 traffic incidents, detailing the date, time, geographic coordinates, environmental conditions, vehicle types, and personal demographics involved in each collision. This rich dataset offers a unique opportunity to explore the nuanced factors that contribute to traffic collision severities in Canada, such as the specific impact of road surface conditions during different weather scenarios.
+The **National Collision Database** curated by Transport Canada, captures details from over 200,000 traffic incidents, including driver age, gender, and collision severity. Data collection involves gathering reports from police and transportation agencies, including various environmental and demographic factors related to each incident. Merged with the **Permis de Conduire** data from the Société de l'assurance automobile du Québec (SAAQ), which  offers demographic distribution of licensed drivers, including age and gender. The combined datasets enable a clear analysis of factors affecting traffic collision severity in Canada. 
 
-## Variables of Interest
+This translates the incidents and demographic details into analyzable data, shows the influence of age and gender on collision outcomes. This helps us better identify patterns and risk factors, thus provides insight for the development of informed traffic safety strategies.
 
-The primary variables analyzed in this study include:
-- **Month**: Categorical; the month when the collision occurred, from "January" to "December".
-- **Day of the Week**: Categorical; the day of the week on which the collision occurred, from "Monday" to "Sunday".
-- **Weather Condition**: Categorical; the observed weather conditions during the incident, such as "Clear", "Rain", "Snow", etc.
-- **Road Surface Condition**: Categorical; the condition of the road during the incident, including "Dry", "Wet", "Icy", etc.
-- **Collision Severity**: Categorical; the severity of the collision, categorized as "Fatal" or "Non-Fatal".
+## Measurement and Variables
 
-Each variable is crucial for understanding the dynamics of traffic accidents and their outcomes, which can significantly aid in preventative measures and policy making.
+**Age**: Numerical then categorized into predefined age groups (e.g., 16-19, 20-24, etc.); the age of the driver involved in the collision.
+
+**Gender**: Categorical; the gender of the driver, categorized as "Male", "Female".
+
+**Collision Severity**: Categorical; indicates the severity of the collision, categorized as "Fatal" or "Non-Fatal".
+
+**Year**: Categorical; the year in which the collision occurred, we focus on the data for 2019.
+
+**Accident Rate per 1000 Drivers**: Numerical; calculated as the number of accidents per age and gender group per 1000 drivers, providing a normalized measure of collision risk.
+
 
 ## Data Cleaning and Preparation
 
-Data was cleaned and prepared for analysis, which involved handling missing values, correcting data entry errors, and formatting date and time entries for consistency. The cleaned dataset was then used for all subsequent analyses, ensuring reliability and accuracy in the findings.
+Data was cleaned and prepared for analysis, which involved handling missing values, and correcting data entry errors. The cleaned dataset was then used for all subsequent analyses, and these steps guarantee the validity of the analysis.
+
+The collision rate per 1000 drivers was calculated by merging the data on traffic incidents, classified by age and gender, with the data on the number of licensed drivers in those categories. The number of incidents for each group was divided by the number of drivers, and this ratio was then multiplied by 1000 to establish the collision rate per thousand. The processed data was saved to help with comparison across different demographic groups.
 
 ## Graphical and Statistical Analysis
 
-To elucidate the data's characteristics and the relationships between various factors and traffic collision outcomes, extensive graphical and statistical analyses were performed. Each figure provides insights into specific aspects of the data, helping to visualize the complex interactions and distributions that underpin traffic collision dynamics.
+Graphical representations and statistical analyses were used to illuminate the data's properties, exploring the interplay between variables and traffic collision outcomes.
 
-- **Figure 1**: [Distribution of Accidents by Driver Age](#fig-age-distribution) reveals the age profile of drivers involved in accidents, highlighting specific age groups that are more susceptible to being in collisions.
+**Accident Rate per 1000 Drivers by Age Group** (@tbl-accident-rate-age) presents the relationship between traffic accidents and the number of licensed drivers, sorted by age, indicating specific age groups with heightened collision rates.
   
-- **Figure 2**: [Distribution of Accidents by Driver Gender](#fig-gender-distribution) explores the gender distribution among drivers involved in traffic accidents, indicating potential gender-specific patterns in accident rates.
+**Accident Rate per 1000 Drivers by Gender** (@tbl-accident-rate-gender) contrasts accident rates between genders (male and female), suggesting a higher incidence among male drivers and indicating possible behavioral influences.
 
-- **Figure 3**: [Impact of Weather Conditions on Collision Severity: Fatal vs. Non-Fatal](#fig-weather-impact-severity) presents a side-by-side comparison of how different weather conditions affect the severity of traffic collisions, contrasting fatal and non-fatal outcomes.
+**Distribution of Accidents by Driver Age** (@fig-age-distribution) illustrates the variation in accident rates across age groups, highlighting the elevated risk among younger drivers and the need for focused safety measures.
 
-- **Figure 4**: [Impact of Road Surface Conditions on Collision Severity: Fatal vs. Non-Fatal](#fig-road-surface-impact) illustrates the relationship between road surface conditions and the severity of collisions, providing a parallel analysis for both fatal and non-fatal incidents.
+**Distribution of Accidents by Driver gender** (@fig-gender-distribution) illustrates the differences in accident rates between male and female drivers, bringing attention to potential areas for targeted safety initiatives.
 
-- **Figure 5**: [Distribution of Traffic Accidents by Day of the Week](#fig-accidents-by-day) depicts the frequency of accidents across different days, identifying any trends related to the day of the week on accident rates.
+These visualizations provides better understanding in the data and assist in making conclusions about traffic safety and accident prevention strategies.
 
-- **Figure 6**: [Distribution of Traffic Accidents by Month](#fig-accidents-by-month) illustrates the monthly distribution of traffic accidents, helping to uncover seasonal or monthly variations in collision frequencies.
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-accident-rate-age
+#| tbl-cap: "Accident Rate per 1000 Drivers by Age Group"
 
-These visualizations are pivotal for understanding the underlying patterns in the data and assist in making informed conclusions about traffic safety and accident prevention strategies.
+library(readr)
+library(knitr)
+library(dplyr)
+library(scales)
 
+# Read the pre-processed data for accident rates by age group
+accident_rate_age <- read_csv("data/Accident_rate_data/accident_data_age.csv")
+
+
+accident_rate_age <- accident_rate_age |>
+  select(age_group, accidents, drivers, accident_rate) |>
+  mutate(
+    `accidents` = comma(`accidents`),
+    `drivers` = comma(`drivers`),
+    `accident_rate` = number(`accident_rate`, accuracy = 0.01)
+  )
+
+# Create a table for accident rates by age group using kable
+kable(accident_rate_age, 
+      col.names = c("Age Group", "Number of Accidents", "Number of Licensed Drivers", "Accident Rate per 1000 Drivers"),
+      align = c('c', 'c', 'c', 'c'))
+```
+
+The table "Accident Rate per 1000 Drivers by Age Group" (@tbl-accident-rate-age) shows that drivers aged 16-19 and 20-24 have the highest accident rates per 1000 drivers, at 55.47 and 55.63, respectively. This indicates these younger drivers are more prone to accidents, likely due to inexperience. In contrast, older drivers (65 and above) have the lowest rate at 17.97, reflecting more conservative driving habits and greater experience. These statistics highlight the need for targeted educational initiatives to reduce risks for younger drivers.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-accident-rate-gender
+#| tbl-cap: "Accident Rate per 1000 Drivers by Gender"
+
+library(readr)
+library(knitr)
+library(dplyr)
+library(scales)
+
+# Read the pre-processed data for accident rates by age group
+accident_rate_gender <- read_csv("data/Accident_rate_data/accident_data_gender.csv")
+
+# Format the columns as specified using dplyr for robust data handling
+accident_rate_gender <- accident_rate_gender %>%
+  select(Gender, accidents, drivers, accident_rate) |>
+  mutate(
+    `accidents` = comma(`accidents`),
+    `drivers` = comma(`drivers`),
+    `accident_rate` = number(`accident_rate`, accuracy = 0.01)
+  )
+
+# Create a table for accident rates by gender using kable
+kable(accident_rate_gender, 
+      col.names = c("Gender", "Number of Accidents", "Number of Licensed Drivers", "Accident Rate per 1000 Drivers"),
+      align = c('c', 'c', 'c', 'c'))
+```
+
+The table "Accident Rate per 1000 Drivers by Gender" (@tbl-accident-rate-gender) reveals higher accident rates among male drivers (36.46) compared to female drivers (25.61). This disparity could be due to males engaging in riskier driving behaviors, possibly influenced by societal norms, or having higher annual mileage, which increases accident exposure. Occupational demands and differences in safety attitudes or vehicle types might also contribute to this trend.
 
 ```{r}
 #| echo: false
@@ -92,266 +147,124 @@ These visualizations are pivotal for understanding the underlying patterns in th
 #| fig-cap: "Distribution of Accidents by Driver Age"
 
 library(ggplot2)
-library(dplyr)
-library(readr)
-
-knitr::opts_chunk$set(echo = TRUE)
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
 
 # Load the dataset
-data <- read_csv("data/analysis_data/analysis_data.csv")
+data <- read_csv("data/Accident_rate_data/accident_data_age.csv")
 
-# Filter data for drivers only
-driver_data <- data %>%
-  filter(person_position == "Driver")
-
-# Create a histogram of driver ages
-ggplot(driver_data, aes(x = age)) +
-  geom_histogram(bins = 30, fill = "blue", color = "black") +
-  scale_x_continuous(breaks = seq(0, max(driver_data$age, na.rm = TRUE), by = 10)) +
-  labs(title = "Distribution of Accidents by Driver Age",
-       x = "Age",
-       y = "Accident Count") +
-  theme_minimal()
+# Plot the accident rates per 1000 drivers by age group
+ggplot(accident_rate_age, aes(x = age_group, y = accident_rate, fill = age_group)) +
+  geom_col() +
+  labs(x = "Age Group", y = "Accidents per 1000 Drivers") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
+The bar graph "Distribution of Accidents by Driver Age" (@fig-age-distribution) illustrates accident rates per 1000 drivers across different age groups. The tallest bars for the youngest groups confirm their high accident rates, while shorter bars for older age groups depict lower rates, suggesting safer driving habits develop with age. This graph effectively highlights key risk groups and intervention points.
 
+\newpage
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 #| label: fig-gender-distribution
-#| fig-cap: "Distribution of Accidents by Driver Gender"
+#| fig-cap: "Distribution of Accidents by Driver gender"
 
 library(ggplot2)
-library(dplyr)
-library(readr)
 
 # Load the dataset
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
-data <- read_csv("data/analysis_data/analysis_data.csv")
+accident_data_gender <- read_csv("data/Accident_rate_data/accident_data_gender.csv")
 
-# Filter data for drivers only
-driver_gender_data <- data %>%
-  filter(person_position == "Driver") %>%
-  group_by(gender) %>%
-  summarise(accident_count = n())
-
-# Create a bar plot for accidents by gender
-ggplot(driver_gender_data, aes(x = gender, y = accident_count, fill = gender)) +
-  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
-  geom_text(aes(label = accident_count), vjust = -0.3, color = "black", size = 3.5) +
-  labs(title = "Distribution of Accidents by Driver Gender",
-       x = "Gender",
-       y = "Accident Count") +
+ggplot(accident_data_gender, aes(x = Gender, y = accident_rate, fill = Gender)) +
+  geom_col() +
+  labs(x = "Gender", y = "Accidents per 1000 Drivers") +
   theme_minimal()
 
 ```
 
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-weather-impact-severity
-#| fig-cap: "Impact of Weather Conditions on Collision Severity: Fatal vs. Non-Fatal"
-
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(patchwork)
-
-# Load the dataset
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
-data <- read_csv("data/analysis_data/analysis_data.csv")
-
-# Create subsets for Fatal and Non-Fatal incidents
-fatal_data <- data %>% filter(severity == "Fatal")
-non_fatal_data <- data %>% filter(severity == "Non-Fatal")
-
-# Group by weather conditions and summarize
-fatal_weather_data <- fatal_data %>%
-  group_by(weather) %>%
-  summarise(count = n(), .groups = 'drop')
-
-non_fatal_weather_data <- non_fatal_data %>%
-  group_by(weather) %>%
-  summarise(count = n(), .groups = 'drop')
-
-# Generate plots
-fatal_plot <- ggplot(fatal_weather_data, aes(x = weather, y = count, fill = weather)) +
-  geom_bar(stat = "identity") +
-  labs(x = NULL, y = "Collision Count", title = "Fatal Collisions") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") 
-
-non_fatal_plot <- ggplot(non_fatal_weather_data, aes(x = weather, y = count, fill = weather)) +
-  geom_bar(stat = "identity") +
-  labs(x = NULL, y = "Collision Count", title = "Non-Fatal Collisions") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")  
-
-# Combine the plots with a shared legend
-combined_plot <- (fatal_plot | non_fatal_plot) + 
-  plot_layout(guides = 'collect') +  
-  theme(legend.position = "right")
-
-# Print the combined plot
-print(combined_plot)
-
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-road-surface-impact
-#| fig-cap: "Impact of Road Surface Conditions on Collision Severity: Fatal vs. Non-Fatal"
-
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(patchwork)
-
-# Load the dataset
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
-data <- read_csv("data/analysis_data/analysis_data.csv")
-
-# Filter data for Fatal and Non-Fatal severity
-fatal_data <- data %>%
-  filter(severity == "Fatal") %>%
-  count(road_surface)
-
-non_fatal_data <- data %>%
-  filter(severity == "Non-Fatal") %>%
-  count(road_surface)
-
-# Plot for Fatal severity
-fatal_plot <- ggplot(fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(x = NULL, y = "Count of Fatal Collisions",
-       title = "Fatal Collisions") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
-
-# Plot for Non-Fatal severity
-non_fatal_plot <- ggplot(non_fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(x = NULL, y = "Count of Non-Fatal Collisions",
-       title = "Non-Fatal Collisions") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none")
-
-# Combine the plots with a shared legend on the right
-combined_plot <- (fatal_plot | non_fatal_plot) +
-  plot_layout(guides = 'collect') +
-  theme(legend.position = "right")
-
-# Print the combined plot
-print(combined_plot)
-
-```
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-fatal-road-surface
-#| fig-cap: "Impact of Road Surface Conditions on Collision Severity"
-
-library(ggplot2)
-library(dplyr)
-library(readr)
-
-# Load the dataset
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
-data <- read_csv("data/analysis_data/analysis_data.csv")
-
-# Define colors for road surface conditions
-road_surface_colors <- sample(colors(), length(unique(data$road_surface)))
-
-# Filter data for Fatal severity
-fatal_data <- data %>%
-  filter(severity == "Fatal") %>%
-  count(road_surface)
-
-# Plot for Fatal severity
-ggplot(fatal_data, aes(x = road_surface, y = n, fill = road_surface)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(x = "Road Surface Condition", y = "Count of Fatal Collisions",
-       title = "Count of Fatal Collisions by Road Surface Conditions") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-accidents-by-month
-#| fig-cap: "Distribution of Traffic Accidents by Month"
-
-library(ggplot2)
-library(dplyr)
-library(readr)
-
-# Load the dataset
-setwd("C:/Users/msn01/OneDrive/Desktop/R/Traffic_Collision_Analysis")
-data <- read_csv("data/analysis_data/analysis_data.csv")
-
-# Count accidents per month
-monthly_accidents_data <- data %>%
-  group_by(month) %>%
-  summarise(accidents = n(), .groups = 'drop') %>%
-  mutate(month = factor(month, levels = c("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")))
-
-# Create a bar plot
-ggplot(monthly_accidents_data, aes(x = month, y = accidents, fill = month)) +
-  geom_bar(stat = "identity") +
-  labs(x = "Month", y = "Number of Accidents",
-       title = "Distribution of Traffic Accidents by Month") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
-
+The bar graph "Distribution of Accidents by Driver Gender" (@fig-gender-distribution) shows accident rates for male and female drivers. The pronounced difference between the two bars highlights the higher risk among male drivers, providing a clear visual of the gender disparity in traffic accidents.
 
 # Model {#sec-model}
 
-The goal of our modelling strategy is twofold. Firstly,...
+In this study, we employed a Bayesian statistical tool to address two key aspects of traffic safety analysis using data from the 2019 National Collision Database and Driver's License Statistics:
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+1. **Severity of Traffic Collisions**: Predicting outcomes of traffic collisions based on age and gender.
+2. **Demographic Influences on Driver Counts**: Examining the effects of demographic factors on the frequency of drivers involved in accidents.
 
-## Model set-up
+The Bayesian approach was chosen due to its flexibility in incorporating prior knowledge and its efficacy in handling uncertainty, which is particularly beneficial in analyzing the multifaceted nature of traffic incidents. 
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+## Model Setup
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
+### Collision Severity Model
+
+We modeled the severity of traffic collisions using a logistic regression, presented in a hierarchical Bayesian format:
+
+\begin{align}
+y_i|\mu_i &\sim \text{Bernoulli}(p_i)) \\
+\text{logit}(p_i) &= \beta_0 + \beta_1 \cdot \text{Age} + \beta_2 \cdot \text{Gender} \\
+\beta_0, \beta_1, \beta_2 &\sim \text{Normal}(0, 2.5)
 \end{align}
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+**$y_i$**: Indicates whether a collision is fatal (1) or not (0) for each incident $i$.
+
+**$p_i$**: Probability of the collision being fatal, modeled as a function of age and gender.
+
+**$\beta_0$**(Intercept): Baseline log-odds of fatality when age and gender are at their reference levels.
+
+**$\beta_1, \beta_2$**: Coefficients for age and gender, respectively, showing their influence on the log-odds of fatality.
+
+**Priors**: The priors for the coefficients ($\beta_0$, $\beta_1$, $\beta_2$) are normally distributed around 0 with a standard deviation of 2.5. This prior setup implies no initial effect (bias) is assumed, and a moderate degree of uncertainty allows the data to significantly inform the parameter estimates.
+
+### Demographic Factors Model
+
+Driver counts, influenced by demographic variables, are modeled using a Poisson regression framework as detailed below:
+
+\begin{align}
+z_i|\lambda_i &\sim \text{Poisson}(\lambda_i) \\
+\log(\lambda_i) &= \gamma_0 + \gamma_1 \cdot \text{Age\_Group} + \gamma_2 \cdot \text{Gender} \\
+\gamma_0 &\sim \text{Normal}(0, 2.5) \\
+\gamma_1, \gamma_2 &\sim \text{Normal}(0, 2.5)
+\end{align}
+
+**$z_i$**: Count of drivers involved in collisions for demographic group $i$.
+
+**$\lambda_i$**: Rate parameter for the Poisson distribution, modeled logarithmically to relate the linear combination of predictors to the expected count.
+
+**$\gamma_0$**: The intercept, indicating the baseline rate of driver counts when all predictors (age and gender) are at their reference levels.
+
+**$\gamma_1, \gamma_2$**: Regression coefficients for the categorical predictors Age_Group and Gender, respectively.
+
+**Priors**: The priors for the intercept ($\gamma_0$) and coefficients ($\gamma_1$, $\gamma_2$) are set as normal distributions centered at zero with a standard deviation of 2.5. This choice reflects no initial bias towards any outcome, with a moderate degree of uncertainty that allows the data to inform the final model outcomes effectively.
+
+## Model Justification
+
+The use of Bayesian models in this study provides advantages for analyzing traffic safety data, particularly their capability to incorporate prior knowledge and effectively handle uncertainty. Bayesian statistics integrate prior distributions, allowing the inclusion of past research into the analysis, thus enhancing the strength and reliability of the findings. This integration is valuable in traffic safety studies where historical data can guide current model assumptions.
+
+Bayesian inference quantifies the uncertainty inherent in traffic data analysis, offering estimates of model parameters along with intervals. Additionally, the flexibility of Bayesian models accommodates complex relationships within traffic safety data through hierarchical structures.
+
+For modeling the severity of traffic collisions, logistic regression is used due to the binary nature of the outcome—fatal versus non-fatal. Logistic regression is well-suited for providing probabilities of these outcomes, crucial for evaluating risk factors. The hierarchical setup of this model allows for nuanced examination of age and gender impacts on collision severity, accounting for variability across different demographic groups.
+
+The influence of demographic factors on the frequency of drivers involved in accidents is modeled using Poisson regression. This approach is appropriate for count data and ensures that predictions are positive, aligning with the count nature of the data. The logarithmic link function used in Poisson regression is standard for maintaining the non-negativity of count predictions.
+
+Both models improve the study’s predictive accuracy regarding traffic accidents. These models provide insights into how demographic factors affect traffic safety, offering  information for policymakers. The findings inform targeted safety measures and regulatory adjustments aimed at reducing traffic-related injuries and fatalities.
 
 
-### Model justification
+# Results {#sec-results}
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+## Model Summaries
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+In this section, we present the findings from our statistical analysis of the relationship between age, gender, and the likelihood of traffic collisions. This analysis involves two models: a logistic regression model for collision severity and a Poisson regression model for demographic analysis.
 
+### Collision Severity Model
+The logistic regression model (@tbl-modelsummary) assessing traffic collision severity provided estimates of the effects of age and gender. The model estimated a negative effect for the intercept, suggesting a baseline tendency towards non-fatal outcomes. A slight positive estimate for age indicates an increase in the odds of fatal collisions as age increases. Gender, coded as male, showed a positive effect, suggesting males are at a higher risk for fatal collisions compared to females.
 
-# Results {#sec-result}
+### Demographic Factors Model
+The Poisson regression model (@tbl-modelsummary) analyzing demographic factors on the rate of driver involvement in collisions showed significant age and gender effects. The intercept was notably high, with younger age groups such as 20-24 and 25-34 showing a reduced rate of involvement when compared to the reference group. Age groups 65 or older showed a further reduced rate, indicating a decline in collision involvement with increasing age. Male gender showed an increased rate of involvement in collisions.
 
-Our results are summarized in @tbl-modelresults.
+### Model Fit and Diagnostic Metrics
+
+The number of observations for the collision severity model was substantial, providing a robust dataset for analysis. The log-likelihood and other model fit indices such as ELPD and WAIC indicate the models' good fit to the data.
+
+The results from the models highlight critical areas for intervention. The increased risk associated with younger drivers points to the potential benefit of targeted education and policy measures to improve driving safety within this demographic. The gender disparity suggests a need for further research into behavioral factors that may contribute to higher collision rates among males.
 
 ```{r}
 #| echo: false
@@ -359,68 +272,103 @@ Our results are summarized in @tbl-modelresults.
 #| warning: false
 #| message: false
 
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+# Load the models
+severity_model <- readRDS(here::here("models/collision_model.rds"))
+demographics_model <- readRDS(here::here("models/demographics_model.rds"))
 ```
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
+#| message: false
+#| label: tbl-modelsummary
+#| tbl-cap: "Combined Model Summary: Traffic Collisions and Demographic Factors"
+
+library(tidyverse)
+library(rstanarm)
+library(modelsummary)
 
 modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
+  list("Traffic Collision Severity Model" = severity_model, "Demographic Factors Model" = demographics_model),
+  output = "markdown",
+  statistic = "mad",  
+  fmt = 2  
 )
 ```
 
+\newpage
 
+## Distribution of Fatal Accidents by Age Group
 
+The bar chart below illustrates the rate of fatal accidents per 1000 drivers segmented by age group, which aligns with the quantitative findings from our regression analyses.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-age-distribution-fatal
+#| fig-cap: "Distribution of Fatal Accidents by Driver Age"
+
+library(ggplot2)
+
+# Load the dataset
+data <- read_csv("data/Accident_rate_data/accident_data_age.csv")
+
+# Plot the accident rates per 1000 drivers by age group
+ggplot(data, aes(x = age_group, y = severe_accident_rate, fill = age_group)) +
+  geom_col() +
+  labs(x = "Age Group", y = "Accidents per 1000 Drivers") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+@fig-age-distribution-fatal presents a distinct pattern: the highest rates of fatal accidents are amongst the youngest drivers, with a pronounced decrease as age increases. The 16-19 age group exhibits the highest accident rate, which sharply contrasts with the notably lower rate observed in the 65 or older group. This visual representation further substantiates the model's indication that younger drivers are at an elevated risk of fatal accidents, potentially due to less experience or riskier driving behaviors.
+
+The consistency in the decline of accident rates across age groups from this graph is particularly informative. It indicates that drivers aged 65 or older are the least likely to be involved in fatal accidents, which may reflect more cautious driving habits or reduced driving exposure.
+
+The comprehensive analysis of collision data through our models, supported by the visual evidence from the age distribution graph, illustrate the critical role of age in traffic safety. These findings provide a compelling argument for tailored preventive measures focusing on younger drivers, aiming to reduce the higher rates of fatal accidents within this demographic. Developing strategies that address the specific needs and risks associated with different age groups can contribute significantly to enhancing overall road safety.
 
 # Discussion {#sec-discussion}
 
-## First discussion point {#sec-first-point}
+## Insights from Traffic Collision Analysis in Canada
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+### Age and Gender Differences
 
-## Second discussion point
+This study demonstrates the significant role that age plays in traffic collisions, with young drivers (aged 16-24) showing the highest rates of incidents. This trend highlights the need for targeted interventions such as specialized training and awareness programs aimed at young drivers to enhance their understanding of road safety.
 
-## Third discussion point
+Drivers aged 65 and above have lower accident rates, potentially due to more cautious driving habits and decreased frequency of driving. These findings could guide policies to maintain and possibly extend driving safety among older adults.
 
-## Weaknesses and next steps
+In terms of gender, the analysis reveals that male drivers are more frequently involved in accidents than female drivers. This difference suggests that male drivers might engage in more aggressive driving behaviors or have higher exposure to driving, which includes occupational driving that often involves higher risks.
 
-Weaknesses and next steps should also be included.
+### Seasonal and Regulatory Influences
 
-\newpage
+Exploring the influence of external factors like weather conditions and regulatory changes could provide further insights. The analysis of accident rates over multiple years could reveal the effects of new traffic laws or advancements in vehicle safety technology.
 
-\appendix
+## Limitations
 
-# Appendix {-}
+### Data and Scope Limitations
 
+The primary dataset from 2019 offers a snapshot but lacks the scope to examine changes over time or the effects of recent global disruptions like the pandemic. Future studies should include more extensive temporal data and consider other influential factors such as socioeconomic variables, which might affect driving patterns and collision rates.
 
-# Additional data details
+### Analytical Constraints
 
-# Model details {#sec-model-details}
+The Bayesian regression approach, while sophisticated, depends heavily on the assumptions made about prior distributions and model parameters. Exploring a range of statistical methods and incorporating machine learning could potentially provide a more nuanced understanding of the factors that contribute to traffic accidents.
 
-## Posterior predictive check
+## Future Research Directions
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+### Broader Data Collection
+Incorporating a wider array of data, including multi-year trends, socio-economic factors, and environmental conditions, would allow for a more detailed analysis of collision causes. This approach would enable researchers to identify and quantify the impacts of various risk factors more accurately.
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+### Enhanced Analytical Techniques
+Utilizing advanced analytics, including machine learning models, could help identify complex interactions between numerous risk factors. These techniques may reveal insights that are not apparent through traditional modeling approaches, such as hidden patterns or predictive indicators of high-risk areas.
 
+### Policy Implementation
+Findings from this study suggest the need for differentiated driving education that addresses the specific risks associated with each demographic group, particularly young and male drivers. Additionally, regular reassessment of traffic laws and safety protocols is essential to adapt to new data and changing conditions effectively.
 
-## Diagnostics
+## Conclusion
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
-
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+This research provides insights into the demographic factors that influence traffic collision rates in Canada, particularly highlighting the risks associated with young and male drivers. While the current study offers guidance for safety interventions, the identified limitations and suggested future research indicate the ongoing need to refine data collection and analytical methods. By expanding the scope of data and embracing new analytical technologies, stakeholders can better understand and mitigate the complexities of road safety. This proactive approach helps developing more effective traffic policies and reducing accident rates.
 
 
 \newpage

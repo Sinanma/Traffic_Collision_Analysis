@@ -34,13 +34,16 @@ collision_data <- collision_data |>
       Age >= 55 & Age <= 64 ~ "55-64",
       Age >= 65 ~ "65 or older"
     ),
-    age_group = as.factor(age_group)
+    age_group = as.factor(age_group),
+    is_severe = if_else(Severity == "Fatal", TRUE, FALSE)
   )
 
 # Summarize collision data by age_group
 collision_summary <- collision_data |>
   group_by(age_group) |>
-  summarise(accidents = n(), .groups = 'drop')
+  summarise(accidents = n(),
+            severe_accidents = sum(is_severe),
+            .groups = 'drop')
 
 
 demographic_summary <- demographic_data |>
@@ -52,7 +55,11 @@ accident_rate_age <- left_join(collision_summary, demographic_summary, by = "age
 
 # Calculate accident rates per 1000 drivers
 accident_rate_age <- accident_rate_age |>
-  mutate(accident_rate = (accidents / drivers) * 1000)
+  mutate(accident_rate = (accidents / drivers) * 1000,
+         severe_accident_rate = (severe_accidents / drivers) * 1000
+         )
+# Display the head of the cleaned data to verify
+head(accident_rate_age)
 
 # Save the final dataset to a CSV file
 write_csv(accident_rate_age, "data/Accident_rate_data/accident_data_age.csv")
