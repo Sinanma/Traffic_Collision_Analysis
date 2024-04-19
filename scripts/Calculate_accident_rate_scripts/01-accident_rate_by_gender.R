@@ -1,6 +1,5 @@
 library(readr)
 library(dplyr)
-library(ggplot2)
 
 # Load the datasets
 demographic_data <- read_csv("data/Demographic_data/analysis_data/analysis_demographic_data.csv")
